@@ -4,8 +4,7 @@ Welcome to my personal portfolio website, built to showcase my experience, skill
 
 ## 🌟 Live Demo
 
-You can view the live site here: [https://yourusername.github.io/portfolio](https://yourusername.github.io/portfolio)  
-*(Replace with your actual URL once deployed)*
+You can view the live site here: [https://yourusername.github.io/portfolio](https://kyletbuzbee.github.io/portfolio)  
 
 ---
 
@@ -62,4 +61,5 @@ To run locally:
 ```bash
 git clone https://github.com/yourusername/portfolio.git
 cd portfolio
+
 open index.html
