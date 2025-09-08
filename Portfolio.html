@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kyle Buzbee - Operations Management Professional</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6; /* A light grey background */
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #1e3a8a, #3b82f6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .card {
+            background-color: white;
+            border-radius: 0.75rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Header & Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold gradient-text">Kyle Buzbee</div>
+            <div class="hidden md:flex space-x-6">
+                <a href="#about" class="text-gray-600 hover:text-blue-600 transition">About</a>
+                <a href="#experience" class="text-gray-600 hover:text-blue-600 transition">Experience</a>
+                <a href="#skills" class="text-gray-600 hover:text-blue-600 transition">Skills</a>
+                <a href="#projects" class="text-gray-600 hover:text-blue-600 transition">Projects</a>
+                <a href="#contact" class="text-gray-600 hover:text-blue-600 transition">Contact</a>
+            </div>
+            <div class="md:hidden">
+                <button id="menu-btn" class="text-gray-600 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </nav>
+        <div id="mobile-menu" class="md:hidden hidden px-6 pb-4 space-y-2">
+             <a href="#about" class="block text-gray-600 hover:text-blue-600 transition">About</a>
+            <a href="#experience" class="block text-gray-600 hover:text-blue-600 transition">Experience</a>
+            <a href="#skills" class="block text-gray-600 hover:text-blue-600 transition">Skills</a>
+            <a href="#projects" class="block text-gray-600 hover:text-blue-600 transition">Projects</a>
+            <a href="#contact" class="block text-gray-600 hover:text-blue-600 transition">Contact</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-12">
+
+        <!-- Hero Section -->
+        <section id="about" class="flex flex-col md:flex-row items-center mb-16">
+            <div class="md:w-1/3 mb-8 md:mb-0 text-center">
+                <img src="https://i.ibb.co/6rP3S0N/headshot.jpg" alt="Kyle Buzbee" class="rounded-full w-48 h-48 mx-auto shadow-lg">
+            </div>
+            <div class="md:w-2/3 md:pl-12">
+                <h1 class="text-4xl font-bold mb-4">Kyle Buzbee</h1>
+                <h2 class="text-2xl font-semibold gradient-text mb-4">Data-Driven Operations Manager</h2>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    A resourceful and data-driven manager with over 6 years of experience optimizing operations in scrap metal recycling, transportation, and landscaping. I have a proven track record of increasing profitability, streamlining workflows, and leading high-performing teams in fast-paced, asset-intensive environments. I'm passionate about continuous improvement, team development, and building systems that scale.
+                </p>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-8 gradient-text">Professional Experience</h2>
+            <div class="space-y-8">
+                <!-- K&L Recycling -->
+                <div class="card p-6">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="text-xl font-bold">Branch Manager</h3>
+                            <p class="text-md font-semibold text-blue-600">K&L Recycling - Tyler, TX</p>
+                        </div>
+                        <span class="text-sm text-gray-500">August 2024 - Present</span>
+                    </div>
+                    <ul class="mt-4 list-disc list-inside text-gray-700 space-y-2">
+                        <li>Oversee processing of 120+ tons/month of ferrous and 15,000+ lbs/month of non-ferrous metals.</li>
+                        <li>Operate and maintain 3+ heavy machines, reducing equipment downtime by 30% through proactive inspections.</li>
+                        <li>Manage 100+ monthly customer transactions with 99.8% accuracy, increasing repeat business by 15%.</li>
+                    </ul>
+                </div>
+                 <!-- Lonestar Rentals -->
+                <div class="card p-6">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="text-xl font-bold">Branch Manager</h3>
+                            <p class="text-md font-semibold text-blue-600">Lonestar Rentals - Tyler, TX</p>
+                        </div>
+                        <span class="text-sm text-gray-500">April 2020 - August 2024</span>
+                    </div>
+                    <ul class="mt-4 list-disc list-inside text-gray-700 space-y-2">
+                        <li>Directed operations for a 1,000+ unit rental fleet, boosting revenue by 40% in the first year.</li>
+                        <li>Achieved a 1,113% year-over-year increase in cash flow.</li>
+                        <li>Cut operational costs by 30% through efficient scheduling and resource allocation.</li>
+                        <li>Led and mentored teams of 20+ employees, fostering a high-performance culture.</li>
+                    </ul>
+                </div>
+                 <!-- Texas Green Turf -->
+                <div class="card p-6">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="text-xl font-bold">Regional Manager</h3>
+                            <p class="text-md font-semibold text-blue-600">Texas Green Turf - Tyler, TX</p>
+                        </div>
+                        <span class="text-sm text-gray-500">August 2018 - April 2020</span>
+                    </div>
+                    <ul class="mt-4 list-disc list-inside text-gray-700 space-y-2">
+                        <li>Managed a regional portfolio of 400+ accounts, generating over $150,000 in annual revenue.</li>
+                        <li>Increased regional efficiency by 22% through training and performance management programs.</li>
+                        <li>Achieved a 92% customer satisfaction rate through proactive engagement and upselling.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-8 gradient-text">Core Competencies</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="card p-6 text-center">
+                    <h3 class="font-bold text-lg">Financial Structuring</h3>
+                    <p class="text-sm text-gray-600">P&L Oversight, Budgeting, Forecasting, Cost Reduction</p>
+                </div>
+                <div class="card p-6 text-center">
+                    <h3 class="font-bold text-lg">Dashboard Development</h3>
+                    <p class="text-sm text-gray-600">Excel, Power BI, SQL, BigQuery, Looker</p>
+                </div>
+                <div class="card p-6 text-center">
+                    <h3 class="font-bold text-lg">Process Optimization</h3>
+                    <p class="text-sm text-gray-600">Workflow Streamlining, Inventory Control, Vendor Negotiation</p>
+                </div>
+                <div class="card p-6 text-center">
+                    <h3 class="font-bold text-lg">Team Leadership</h3>
+                    <p class="text-sm text-gray-600">Talent Development, Mentorship, Performance Management</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-8 gradient-text">Key Projects</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="card p-6">
+                    <h3 class="text-xl font-bold mb-2">Business Expense App</h3>
+                    <p class="text-gray-700 mb-4">
+                        This application provides a platform for businesses to manage expenses and revenues. It includes features for adding, viewing, editing, and deleting expenses and revenues, filtering expenses by category, generating profit and loss statements, and suggesting cost reduction strategies.
+                    </p>
+                    <div class="flex flex-wrap">
+                        <span class="bg-blue-100 text-blue-800 text-sm font-medium mr-2 mb-2 px-2.5 py-0.5 rounded">React</span>
+                        <span class="bg-green-100 text-green-800 text-sm font-medium mr-2 mb-2 px-2.5 py-0.5 rounded">Python</span>
+                        <span class="bg-yellow-100 text-yellow-800 text-sm font-medium mr-2 mb-2 px-2.5 py-0.5 rounded">Flask</span>
+                    </div>
+                </div>
+                <div class="card p-6">
+                    <h3 class="text-xl font-bold mb-2">Preventive Maintenance Strategy</h3>
+                    <p class="text-gray-700 mb-4">
+                        Developed and implemented a proactive preventive maintenance schedule for a large rental fleet. This initiative reduced equipment depreciation costs by 25% and significantly decreased downtime, improving both asset longevity and customer satisfaction.
+                    </p>
+                    <div class="flex flex-wrap">
+                        <span class="bg-indigo-100 text-indigo-800 text-sm font-medium mr-2 mb-2 px-2.5 py-0.5 rounded">Asset Management</span>
+                         <span class="bg-purple-100 text-purple-800 text-sm font-medium mr-2 mb-2 px-2.5 py-0.5 rounded">Cost Reduction</span>
+                        <span class="bg-pink-100 text-pink-800 text-sm font-medium mr-2 mb-2 px-2.5 py-0.5 rounded">Operational Efficiency</span>
+                    </div>
+                </div>
+                <div class="card p-6">
+                    <h3 class="text-xl font-bold mb-2">Algorithmic Trading Bot</h3>
+                    <p class="text-gray-700 mb-4">
+                        Designed and built an automated trading bot using Python to execute a pairs trading strategy. The bot connects to the Alpaca API, fetches historical market data, calculates spreads and moving averages to generate trading signals, and automatically executes buy/sell orders.
+                    </p>
+                    <div class="flex flex-wrap">
+                        <span class="bg-green-100 text-green-800 text-sm font-medium mr-2 mb-2 px-2.5 py-0.5 rounded">Python</span>
+                        <span class="bg-gray-100 text-gray-800 text-sm font-medium mr-2 mb-2 px-2.5 py-0.5 rounded">Algorithmic Trading</span>
+                        <span class="bg-blue-100 text-blue-800 text-sm font-medium mr-2 mb-2 px-2.5 py-0.5 rounded">Alpaca API</span>
+                        <span class="bg-yellow-100 text-yellow-800 text-sm font-medium mr-2 mb-2 px-2.5 py-0.5 rounded">Data Analysis</span>
+                    </div>
+                </div>
+                <div class="card p-6">
+                    <h3 class="text-xl font-bold mb-2">Customer Segmentation Analysis</h3>
+                    <p class="text-gray-700 mb-4">
+                        Conducted a customer segmentation analysis using Python and machine learning. This project involved preprocessing sales data, applying K-Means clustering to group customers into distinct segments based on purchasing habits, and visualizing the results for targeted marketing.
+                    </p>
+                    <div class="flex flex-wrap">
+                        <span class="bg-green-100 text-green-800 text-sm font-medium mr-2 mb-2 px-2.5 py-0.5 rounded">Python</span>
+                        <span class="bg-purple-100 text-purple-800 text-sm font-medium mr-2 mb-2 px-2.5 py-0.5 rounded">Machine Learning</span>
+                        <span class="bg-indigo-100 text-indigo-800 text-sm font-medium mr-2 mb-2 px-2.5 py-0.5 rounded">K-Means Clustering</span>
+                        <span class="bg-pink-100 text-pink-800 text-sm font-medium mr-2 mb-2 px-2.5 py-0.5 rounded">Data Visualization</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Education & Certifications -->
+        <section id="education" class="mb-16">
+             <h2 class="text-3xl font-bold text-center mb-8 gradient-text">Education & Certifications</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                 <!-- Education -->
+                <div class="card p-6">
+                    <h3 class="text-xl font-bold mb-4">Education</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <p class="font-semibold">Bachelor of Science in Business Management</p>
+                            <p class="text-sm text-gray-600">Colorado State University-Global | Dec 2022</p>
+                        </div>
+                        <div>
+                            <p class="font-semibold">Associate of Applied Science in Business Management</p>
+                            <p class="text-sm text-gray-600">Tyler Junior College | Dec 2020</p>
+                        </div>
+                    </div>
+                </div>
+                 <!-- Certifications -->
+                <div class="card p-6">
+                    <h3 class="text-xl font-bold mb-4">Certifications</h3>
+                    <div class="space-y-4">
+                         <div>
+                            <p class="font-semibold">Microsoft Certified: Power BI Data Analyst Associate (PL-300)</p>
+                            <p class="text-sm text-gray-600">Expected January 2025</p>
+                        </div>
+                        <div>
+                            <p class="font-semibold">Google Cloud Data Analytics Professional Certificate</p>
+                             <p class="text-sm text-gray-600">Coursera | Jan 2025</p>
+                        </div>
+                        <div>
+                            <p class="font-semibold">HubSpot Inbound Marketing Certification</p>
+                             <p class="text-sm text-gray-600">HubSpot Academy | Jan 2025</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Contact Section -->
+        <section id="contact" class="text-center">
+            <h2 class="text-3xl font-bold mb-4 gradient-text">Get In Touch</h2>
+            <p class="text-lg text-gray-700 mb-6">I'm always open to discussing new opportunities and challenges. <br>Feel free to reach out to me via email or connect with me on LinkedIn.</p>
+            <div class="flex justify-center items-center space-x-6">
+                <a href="mailto:Buzbee.Kyle@outlook.com" class="bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-blue-700 transition shadow-md">Email Me</a>
+                <a href="https://linkedin.com/in/kyle-buzbee" target="_blank" class="text-blue-600 hover:underline">
+                    LinkedIn Profile
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white mt-16">
+        <div class="container mx-auto px-6 py-4 text-center text-gray-600">
+            <p>&copy; 2024 Kyle Buzbee. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
