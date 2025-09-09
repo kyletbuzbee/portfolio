@@ -1,261 +1,405 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kyle Buzbee - Operations Management Professional</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f3f4f6; /* A light grey background */
-        }
-        .gradient-text {
-            background: linear-gradient(to right, #1e3a8a, #3b82f6);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .card {
-            background-color: white;
-            border-radius: 0.75rem;
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kyle Buzbee – Data-Driven Operations Manager</title>
+  <meta name="description" content="Kyle Buzbee: optimizing asset-intensive operations with data analytics, process design, and leadership."/>
+  <meta property="og:title" content="Kyle Buzbee – Data-Driven Operations Manager"/>
+  <meta property="og:description" content="Data-driven operations manager specializing in process optimization and team leadership."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://yourdomain.com/"/>
+  <meta property="og:image" content="https://yourdomain.com/og-image.jpg"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style"
+        onload="this.onload=null;this.rel='stylesheet'"/>
+  <script>tailwind = { config: { darkMode: 'class' } }</script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXX');
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Kyle Buzbee",
+    "jobTitle": "Data-Driven Operations Manager",
+    "url": "https://kyletbuzbee.github.io/portfolio/",
+    "sameAs": ["https://linkedin.com/in/kyle-buzbee"],
+    "image": "https://kyletbuzbee.github.io/portfolio/headshot.jpg"
+  }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    .timeline { position: relative; padding-left: 1rem; }
+    .timeline::before { content: ""; position: absolute; left: 0.5rem; top: 0; width: 2px; height: 100%; background: #e5e7eb; }
+    .timeline-item { position: relative; margin-bottom: 2rem; padding-left: 1.5rem; }
+    .timeline-item::before { content: ""; position: absolute; left: 0.25rem; top: 0.25rem; width: 0.5rem; height: 0.5rem; border-radius: 50%; background: #2563eb; }
+    #back-to-top { display: none; position: fixed; bottom: 2rem; right: 2rem; background: #2563eb; color: white; padding: 0.75rem; border-radius: 0.375rem; z-index: 50; }
+    [data-theme-toggle] { cursor: pointer; }
+    [data-font-decrease], [data-font-increase] { cursor: pointer; }
+    .modal { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.6); justify-content: center; align-items: center; }
+    .modal-content { background: white; max-width: 90%; width: 32rem; padding: 1.5rem; border-radius: 0.5rem; position: relative; }
+    .modal-close { position: absolute; top: 0.5rem; right: 0.5rem; cursor: pointer; }
+  </style>
 </head>
-<body class="text-gray-800">
+<body class="bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-100 antialiased">
+  <!-- BACK TO TOP -->
+  <button id="back-to-top" aria-label="Back to top">↑</button>
 
-    <header class="bg-white shadow-md sticky top-0 z-50">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="text-2xl font-bold gradient-text">Kyle Buzbee</div>
-            <div class="hidden md:flex space-x-6">
-                <a href="#about" class="text-gray-600 hover:text-blue-600 transition">About</a>
-                <a href="#experience" class="text-gray-600 hover:text-blue-600 transition">Experience</a>
-                <a href="#skills" class="text-gray-600 hover:text-blue-600 transition">Skills</a>
-                <a href="#projects" class="text-gray-600 hover:text-blue-600 transition">Projects</a>
-                <a href="#contact" class="text-gray-600 hover:text-blue-600 transition">Contact</a>
-            </div>
-            <div class="md:hidden">
-                <button id="menu-btn" class="text-gray-600 focus:outline-none">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-                </button>
-            </div>
-        </nav>
-        <div id="mobile-menu" class="md:hidden hidden px-6 pb-4 space-y-2">
-             <a href="#about" class="block text-gray-600 hover:text-blue-600 transition">About</a>
-            <a href="#experience" class="block text-gray-600 hover:text-blue-600 transition">Experience</a>
-            <a href="#skills" class="block text-gray-600 hover:text-blue-600 transition">Skills</a>
-            <a href="#projects" class="block text-gray-600 hover:text-blue-600 transition">Projects</a>
-            <a href="#contact" class="block text-gray-600 hover:text-blue-600 transition">Contact</a>
+  <!-- HEADER & NAV -->
+  <header class="bg-white dark:bg-gray-800 shadow sticky top-0 z-40">
+    <nav class="container mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="#" class="text-2xl font-bold text-indigo-600">Kyle Buzbee</a>
+      <ul id="nav-links" class="hidden md:flex space-x-8 text-gray-600 dark:text-gray-300">
+        <li><a href="#hero" class="nav-link hover:text-indigo-600">Home</a></li>
+        <li><a href="#about" class="nav-link hover:text-indigo-600">About</a></li>
+        <li><a href="#experience" class="nav-link hover:text-indigo-600">Experience</a></li>
+        <li><a href="#skills" class="nav-link hover:text-indigo-600">Skills</a></li>
+        <li><a href="#projects" class="nav-link hover:text-indigo-600">Projects</a></li>
+        <li><a href="#contact" class="nav-link hover:text-indigo-600">Contact</a></li>
+      </ul>
+      <div class="flex items-center space-x-4">
+        <button data-font-decrease class="text-xl">A–</button>
+        <button data-font-increase class="text-xl">A+</button>
+        <button data-theme-toggle class="text-2xl">🌓</button>
+        <button id="mobile-menu-btn" class="md:hidden focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </nav>
+    <div id="mobile-menu" class="md:hidden hidden px-6 pb-4 bg-white dark:bg-gray-800">
+      <ul class="space-y-2 text-gray-600 dark:text-gray-300">
+        <li><a href="#hero" class="block nav-link hover:text-indigo-600">Home</a></li>
+        <li><a href="#about" class="block nav-link hover:text-indigo-600">About</a></li>
+        <li><a href="#experience" class="block nav-link hover:text-indigo-600">Experience</a></li>
+        <li><a href="#skills" class="block nav-link hover:text-indigo-600">Skills</a></li>
+        <li><a href="#projects" class="block nav-link hover:text-indigo-600">Projects</a></li>
+        <li><a href="#contact" class="block nav-link hover:text-indigo-600">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="container mx-auto px-6 py-12 space-y-24">
+    <!-- HERO -->
+    <section id="hero" class="flex flex-col-reverse md:flex-row items-center gap-12">
+      <div class="md:w-1/2 space-y-6">
+        <h1 id="greeting" class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-gray-100"></h1>
+        <p class="text-lg text-gray-600 dark:text-gray-300">
+          I optimize asset-intensive operations using data analytics, process design, and team leadership. Over 6 years, I’ve driven profitability, efficiency, and growth in scrap-metal recycling, transportation, and rental services.
+        </p>
+        <div class="flex space-x-4">
+          <a href="#contact" class="bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition">Get in Touch</a>
+          <a href="#experience" class="border border-indigo-600 text-indigo-600 px-6 py-3 rounded-lg hover:bg-indigo-50 transition">View Experience</a>
         </div>
-    </header>
+      </div>
+      <div class="md:w-1/2 text-center">
+        <img src="headshot.jpg" alt="Kyle Buzbee" loading="lazy"
+             class="w-64 h-64 rounded-full mx-auto shadow-xl"/>
+      </div>
+    </section>
 
-    <main class="container mx-auto px-6 py-12">
+    <!-- METRICS -->
+    <section id="metrics" class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+      <div>
+        <h3 class="text-4xl font-semibold counter" data-target="120">0</h3>
+        <p class="text-gray-600 dark:text-gray-300">Tons Processed /mo</p>
+      </div>
+      <div>
+        <h3 class="text-4xl font-semibold counter" data-target="30">0</h3>
+        <p class="text-gray-600 dark:text-gray-300">% Downtime ↓</p>
+      </div>
+      <div>
+        <h3 class="text-4xl font-semibold counter" data-target="15">0</h3>
+        <p class="text-gray-600 dark:text-gray-300">% Repeat Business ↑</p>
+      </div>
+      <div>
+        <h3 class="text-4xl font-semibold counter" data-target="6">0</h3>
+        <p class="text-gray-600 dark:text-gray-300">Years Experience</p>
+      </div>
+    </section>
 
-        <section id="about" class="flex flex-col md:flex-row items-center mb-16">
-            <div class="md:w-1/3 mb-8 md:mb-0 text-center">
-                <img src="headshot.jpg" alt="Kyle Buzbee" class="rounded-full w-48 h-48 mx-auto shadow-lg">
-            </div>
-            <div class="md:w-2/3 md:pl-12">
-                <h1 class="text-4xl font-bold mb-4">Kyle Buzbee</h1>
-                <h2 class="text-2xl font-semibold gradient-text mb-4">Data-Driven Operations Manager</h2>
-                <p class="text-lg text-gray-700 leading-relaxed">
-                    A resourceful and data-driven manager with over 6 years of experience optimizing operations in scrap metal recycling, transportation, and landscaping. I have a proven track record of increasing profitability, streamlining workflows, and leading high-performing teams in fast-paced, asset-intensive environments. I'm passionate about continuous improvement, team development, and building systems that scale.
-                </p>
-            </div>
-        </section>
+    <!-- ABOUT -->
+    <section id="about" class="grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <h2 class="text-3xl font-semibold text-indigo-600">About Me</h2>
+        <p class="mt-4 text-gray-700 dark:text-gray-300">
+          Passionate about continuous improvement and building scalable systems. Expertise in P&amp;L oversight, dashboard development, preventive maintenance, and data-driven team leadership.
+        </p>
+      </div>
+      <ul class="space-y-4 list-disc list-inside text-gray-700 dark:text-gray-300">
+        <li>Oversee $5M+ annual budgets with rigorous controls.</li>
+        <li>Cut reporting time by 80% via Power BI dashboards.</li>
+        <li>Reduced downtime 25% with proactive maintenance.</li>
+        <li>Led teams of 20+ to exceed performance targets.</li>
+      </ul>
+    </section>
 
-        <section id="experience" class="mb-16">
-            <h2 class="text-3xl font-bold text-center mb-8 gradient-text">Professional Experience</h2>
-            <div class="space-y-8">
-                <div class="card p-6">
-                    <div class="flex justify-between items-start">
-                        <div>
-                            <h3 class="text-xl font-bold">Branch Manager</h3>
-                            <p class="text-md font-semibold text-blue-600">K&L Recycling - Tyler, TX</p>
-                        </div>
-                        <span class="text-sm text-gray-500">August 2024 - Present</span>
-                    </div>
-                    <ul class="mt-4 list-disc list-inside text-gray-700 space-y-2">
-                        <li>Oversee processing of 120+ tons/month of ferrous and 15,000+ lbs/month of non-ferrous metals.</li>
-                        <li>Operate and maintain 3+ heavy machines, reducing equipment downtime by 30% through proactive inspections.</li>
-                        <li>Manage 100+ monthly customer transactions with 99.8% accuracy, increasing repeat business by 15%.</li>
-                    </ul>
-                </div>
-                 <div class="card p-6">
-                    <div class="flex justify-between items-start">
-                        <div>
-                            <h3 class="text-xl font-bold">Branch Manager</h3>
-                            <p class="text-md font-semibold text-blue-600">Lonestar Rentals - Tyler, TX</p>
-                        </div>
-                        <span class="text-sm text-gray-500">April 2020 - August 2024</span>
-                    </div>
-                    <ul class="mt-4 list-disc list-inside text-gray-700 space-y-2">
-                        <li>Directed operations for a 1,000+ unit rental fleet, boosting revenue by 40% in the first year.</li>
-                        <li>Achieved a 1,113% year-over-year increase in cash flow.</li>
-                        <li>Cut operational costs by 30% through efficient scheduling and resource allocation.</li>
-                        <li>Led and mentored teams of 20+ employees, fostering a high-performance culture.</li>
-                    </ul>
-                </div>
-                 <div class="card p-6">
-                    <div class="flex justify-between items-start">
-                        <div>
-                            <h3 class="text-xl font-bold">Regional Manager</h3>
-                            <p class="text-md font-semibold text-blue-600">Texas Green Turf - Tyler, TX</p>
-                        </div>
-                        <span class="text-sm text-gray-500">August 2018 - April 2020</span>
-                    </div>
-                    <ul class="mt-4 list-disc list-inside text-gray-700 space-y-2">
-                        <li>Managed a regional portfolio of 400+ accounts, generating over $150,000 in annual revenue.</li>
-                        <li>Increased regional efficiency by 22% through training and performance management programs.</li>
-                        <li>Achieved a 92% customer satisfaction rate through proactive engagement and upselling.</li>
-                    </ul>
-                </div>
-
-            </div>
-        </section>
-
-        <section id="skills" class="mb-16">
-            <h2 class="text-3xl font-bold text-center mb-8 gradient-text">Core Competencies</h2>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                <div class="card p-6 text-center">
-                    <h3 class="font-bold text-lg">Financial Structuring</h3>
-                    <p class="text-sm text-gray-600">P&L Oversight, Budgeting, Forecasting, Cost Reduction</p>
-                </div>
-                <div class="card p-6 text-center">
-                    <h3 class="font-bold text-lg">Dashboard Development</h3>
-                    <p class="text-sm text-gray-600">Excel, Power BI, SQL, BigQuery, Looker</p>
-                </div>
-                <div class="card p-6 text-center">
-                    <h3 class="font-bold text-lg">Process Optimization</h3>
-                    <p class="text-sm text-gray-600">Workflow Streamlining, Inventory Control, Vendor Negotiation</p>
-                </div>
-                <div class="card p-6 text-center">
-                    <h3 class="font-bold text-lg">Team Leadership</h3>
-                    <p class="text-sm text-gray-600">Talent Development, Mentorship, Performance Management</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="projects" class="mb-16">
-            <h2 class="text-3xl font-bold text-center mb-8 gradient-text">Key Projects</h2>
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="card p-6">
-                    <h3 class="text-xl font-bold mb-2">Business Expense App</h3>
-                    <p class="text-gray-700 mb-4">
-                        This application provides a platform for businesses to manage expenses and revenues. It includes features for adding, viewing, editing, and deleting expenses and revenues, filtering expenses by category, generating profit and loss statements, and suggesting cost reduction strategies.
-                    </p>
-                    <div class="flex flex-wrap">
-                        <span class="bg-blue-100 text-blue-800 text-sm font-medium mr-2 mb-2 px-2.5 py-0.5 rounded">React</span>
-                        <span class="bg-green-100 text-green-800 text-sm font-medium mr-2 mb-2 px-2.5 py-0.5 rounded">Python</span>
-                        <span class="bg-yellow-100 text-yellow-800 text-sm font-medium mr-2 mb-2 px-2.5 py-0.5 rounded">Flask</span>
-                    </div>
-                </div>
-                <div class="card p-6">
-                    <h3 class="text-xl font-bold mb-2">Preventive Maintenance Strategy</h3>
-                    <p class="text-gray-700 mb-4">
-                        Developed and implemented a proactive preventive maintenance schedule for a large rental fleet. This initiative reduced equipment depreciation costs by 25% and significantly decreased downtime, improving both asset longevity and customer satisfaction.
-                    </p>
-                    <div class="flex flex-wrap">
-                        <span class="bg-indigo-100 text-indigo-800 text-sm font-medium mr-2 mb-2 px-2.5 py-0.5 rounded">Asset Management</span>
-                         <span class="bg-purple-100 text-purple-800 text-sm font-medium mr-2 mb-2 px-2.5 py-0.5 rounded">Cost Reduction</span>
-                        <span class="bg-pink-100 text-pink-800 text-sm font-medium mr-2 mb-2 px-2.5 py-0.5 rounded">Operational Efficiency</span>
-                    </div>
-                </div>
-                <div class="card p-6">
-                    <h3 class="text-xl font-bold mb-2">Algorithmic Trading Bot</h3>
-                    <p class="text-gray-700 mb-4">
-                        Designed and built an automated trading bot using Python to execute a pairs trading strategy. The bot connects to the Alpaca API, fetches historical market data, calculates spreads and moving averages to generate trading signals, and automatically executes buy/sell orders.
-                    </p>
-                    <div class="flex flex-wrap">
-                        <span class="bg-green-100 text-green-800 text-sm font-medium mr-2 mb-2 px-2.5 py-0.5 rounded">Python</span>
-                        <span class="bg-gray-100 text-gray-800 text-sm font-medium mr-2 mb-2 px-2.5 py-0.5 rounded">Algorithmic Trading</span>
-                        <span class="bg-blue-100 text-blue-800 text-sm font-medium mr-2 mb-2 px-2.5 py-0.5 rounded">Alpaca API</span>
-                        <span class="bg-yellow-100 text-yellow-800 text-sm font-medium mr-2 mb-2 px-2.5 py-0.5 rounded">Data Analysis</span>
-                    </div>
-                </div>
-                <div class="card p-6">
-                    <h3 class="text-xl font-bold mb-2">Customer Segmentation Analysis</h3>
-                    <p class="text-gray-700 mb-4">
-                        Conducted a customer segmentation analysis using Python and machine learning. This project involved preprocessing sales data, applying K-Means clustering to group customers into distinct segments based on purchasing habits, and visualizing the results for targeted marketing.
-                    </p>
-                    <div class="flex flex-wrap">
-                        <span class="bg-green-100 text-green-800 text-sm font-medium mr-2 mb-2 px-2.5 py-0.5 rounded">Python</span>
-                        <span class="bg-purple-100 text-purple-800 text-sm font-medium mr-2 mb-2 px-2.5 py-0.5 rounded">Machine Learning</span>
-                        <span class="bg-indigo-100 text-indigo-800 text-sm font-medium mr-2 mb-2 px-2.5 py-0.5 rounded">K-Means Clustering</span>
-                        <span class="bg-pink-100 text-pink-800 text-sm font-medium mr-2 mb-2 px-2.5 py-0.5 rounded">Data Visualization</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-        <section id="education" class="mb-16">
-             <h2 class="text-3xl font-bold text-center mb-8 gradient-text">Education & Certifications</h2>
-            <div class="grid md:grid-cols-2 gap-8">
-                 <div class="card p-6">
-                    <h3 class="text-xl font-bold mb-4">Education</h3>
-                    <div class="space-y-4">
-                        <div>
-                            <p class="font-semibold">Bachelor of Science in Business Management</p>
-                            <p class="text-sm text-gray-600">Colorado State University-Global | Dec 2022</p>
-                        </div>
-                        <div>
-                            <p class="font-semibold">Associate of Applied Science in Business Management</p>
-                            <p class="text-sm text-gray-600">Tyler Junior College | Dec 2020</p>
-                        </div>
-                    </div>
-                </div>
-                 <div class="card p-6">
-                    <h3 class="text-xl font-bold mb-4">Certifications</h3>
-                    <div class="space-y-4">
-                         <div>
-                            <p class="font-semibold">Microsoft Certified: Power BI Data Analyst Associate (PL-300)</p>
-                            <p class="text-sm text-gray-600">Expected January 2025</p>
-                        </div>
-                        <div>
-                            <p class="font-semibold">Google Cloud Data Analytics Professional Certificate</p>
-                             <p class="text-sm text-gray-600">Coursera | Jan 2025</p>
-                        </div>
-                        <div>
-                            <p class="font-semibold">HubSpot Inbound Marketing Certification</p>
-                             <p class="text-sm text-gray-600">HubSpot Academy | Jan 2025</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-        <section id="contact" class="text-center">
-            <h2 class="text-3xl font-bold mb-4 gradient-text">Get In Touch</h2>
-            <p class="text-lg text-gray-700 mb-6">I'm always open to discussing new opportunities and challenges. <br>Feel free to reach out to me via email or connect with me on LinkedIn.</p>
-            <div class="flex justify-center items-center space-x-6">
-                <a href="mailto:Buzbee.Kyle@outlook.com" class="bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-blue-700 transition shadow-md">Email Me</a>
-                <a href="https://linkedin.com/in/kyle-buzbee" target="_blank" class="text-blue-600 hover:underline">
-                    LinkedIn Profile
-                </a>
-            </div>
-        </section>
-
-    </main>
-
-    <footer class="bg-white mt-16">
-        <div class="container mx-auto px-6 py-4 text-center text-gray-600">
-            <p>&copy; 2024 Kyle Buzbee. All Rights Reserved.</p>
+    <!-- EXPERIENCE -->
+    <section id="experience">
+      <h2 class="text-3xl font-semibold text-indigo-600 text-center mb-8">Professional Experience</h2>
+      <div class="timeline">
+        <div class="timeline-item" data-details="Processed 120+ tons/month; reduced downtime 30%; increased repeat business 15%.">
+          <h3 class="cursor-pointer font-semibold text-lg">Branch Manager<br><small class="text-gray-500 dark:text-gray-400">K&amp;L Recycling · Tyler, TX · Aug 2024–Present</small></h3>
         </div>
-    </footer>
-    <script>
-        const menuBtn = document.getElementById('menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-    </script>
+        <div class="timeline-item" data-details="Scaled fleet revenue +40%; grew cash flow 1,113%; cut costs 30%.">
+          <h3 class="cursor-pointer font-semibold text-lg">Branch Manager<br><small class="text-gray-500 dark:text-gray-400">Lonestar Rentals · Tyler, TX · Apr 2020–Aug 2024</small></h3>
+        </div>
+        <div class="timeline-item" data-details="Managed 400+ accounts; drove $150K+ revenue; boosted efficiency 22%.">
+          <h3 class="cursor-pointer font-semibold text-lg">Regional Manager<br><small class="text-gray-500 dark:text-gray-400">Texas Green Turf · Tyler, TX · Aug 2018–Apr 2020</small></h3>
+        </div>
+      </div>
+      <p id="timeline-details" class="mt-4 text-gray-700 dark:text-gray-300 italic"></p>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <h2 class="text-3xl font-semibold text-indigo-600 text-center mb-8">Core Competencies</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div class="bg-white dark:bg-gray-800 rounded-xl shadow p-6 text-center hover:shadow-lg transition">
+          <h4 class="font-semibold mb-2">Financial Structuring</h4>
+          <p class="text-sm text-gray-600 dark:text-gray-300">Budgeting · Forecasting · Cost Reduction</p>
+        </div>
+        <div class="bg-white dark:bg-gray-800 rounded-xl shadow p-6 text-center hover:shadow-lg transition">
+          <h4 class="font-semibold mb-2">Dashboard Dev</h4>
+          <p class="text-sm text-gray-600 dark:text-gray-300">Excel · Power BI · SQL</p>
+        </div>
+        <div class="bg-white dark:bg-gray-800 rounded-xl shadow p-6 text-center hover:shadow-lg transition">
+          <h4 class="font-semibold mb-2">Process Opt</h4>
+          <p class="text-sm text-gray-600 dark:text-gray-300">Workflow · Inventory · Vendor</p>
+        </div>
+        <div class="bg-white dark:bg-gray-800 rounded-xl shadow p-6 text-center hover:shadow-lg transition">
+          <h4 class="font-semibold mb-2">Team Leadership</h4>
+          <p class="text-sm text-gray-600 dark:text-gray-300">Mentorship · Hiring · Performance</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <h2 class="text-3xl font-semibold text-indigo-600 text-center mb-8">Key Projects</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- Card -->
+        <div class="bg-white dark:bg-gray-800 rounded-xl shadow p-6 hover:shadow-lg transition cursor-pointer project-card" data-project="1">
+          <h4 class="font-semibold text-xl mb-2">Business Expense App</h4>
+          <p class="text-gray-700 dark:text-gray-300 mb-4">Full-stack expense/revenue platform: P&amp;L, filters, cost reduction.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="bg-blue-100 text-blue-800 text-sm px-2 py-1 rounded">React</span>
+            <span class="bg-green-100 text-green-800 text-sm px-2 py-1 rounded">Python</span>
+          </div>
+        </div>
+        <!-- Card -->
+        <div class="bg-white dark:bg-gray-800 rounded-xl shadow p-6 hover:shadow-lg transition cursor-pointer project-card" data-project="2">
+          <h4 class="font-semibold text-xl mb-2">Preventive Maintenance</h4>
+          <p class="text-gray-700 dark:text-gray-300 mb-4">Scheduled plan cutting depreciation costs 25% and downtime.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="bg-purple-100 text-purple-800 text-sm px-2 py-1 rounded">Asset Mgmt</span>
+            <span class="bg-indigo-100 text-indigo-800 text-sm px-2 py-1 rounded">Efficiency</span>
+          </div>
+        </div>
+        <!-- Modal container -->
+        <div id="project-modals" class="modal flex">
+          <div class="modal-content">
+            <span class="modal-close text-gray-500 hover:text-gray-800">&times;</span>
+            <div id="modal-body" class="space-y-4"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section id="testimonials" class="space-y-6">
+      <h2 class="text-3xl font-semibold text-indigo-600 text-center">Testimonials</h2>
+      <div class="relative overflow-hidden">
+        <div id="slides" class="flex transition-transform duration-500">
+          <blockquote class="w-full p-6 bg-white dark:bg-gray-800 rounded-xl shadow mx-2">
+            “Kyle’s data-driven approach transformed our operations—downtime is nearly zero now.”<br/><cite class="mt-4 block text-sm text-gray-500">– Client A</cite>
+          </blockquote>
+          <blockquote class="w-full p-6 bg-white dark:bg-gray-800 rounded-xl shadow mx-2">
+            “His preventive maintenance strategy saved us thousands in depreciation.”<br/><cite class="mt-4 block text-sm text-gray-500">– Client B</cite>
+          </blockquote>
+        </div>
+        <button id="prev-slide" class="absolute left-0 top-1/2 transform -translate-y-1/2 px-3 py-1 bg-indigo-600 text-white rounded-l">‹</button>
+        <button id="next-slide" class="absolute right-0 top-1/2 transform -translate-y-1/2 px-3 py-1 bg-indigo-600 text-white rounded-r">›</button>
+      </div>
+    </section>
+
+    <!-- CONTACT & CALENDLY & NEWSLETTER -->
+    <section id="contact" class="grid md:grid-cols-2 gap-12">
+      <div>
+        <h2 class="text-3xl font-semibold text-indigo-600 mb-4">Let’s Connect</h2>
+        <form id="contact-form" class="space-y-4">
+          <div>
+            <label class="block text-gray-700 dark:text-gray-300">Name</label>
+            <input type="text" name="name" required class="w-full mt-1 p-2 border rounded"/>
+          </div>
+          <div>
+            <label class="block text-gray-700 dark:text-gray-300">Email</label>
+            <input type="email" name="email" required class="w-full mt-1 p-2 border rounded"/>
+          </div>
+          <div>
+            <label class="block text-gray-700 dark:text-gray-300">Message</label>
+            <textarea name="message" rows="4" required class="w-full mt-1 p-2 border rounded"></textarea>
+          </div>
+          <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY"></div>
+          <button type="submit" class="bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition">Send Message</button>
+        </form>
+        <div class="mt-8">
+          <h3 class="font-semibold text-lg text-indigo-600 mb-2">Newsletter</h3>
+          <form id="newsletter-form" class="flex space-x-2">
+            <input type="email" placeholder="Your email" required class="flex-1 p-2 border rounded"/>
+            <button type="submit" class="bg-indigo-600 text-white px-4 rounded hover:bg-indigo-700">Subscribe</button>
+          </form>
+        </div>
+      </div>
+      <div>
+        <div class="calendly-inline-widget" data-url="https://calendly.com/yourusername" style="min-width:320px;height:580px;"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-white dark:bg-gray-800 py-6">
+    <p class="text-center text-gray-500 dark:text-gray-400 text-sm">&copy; 2025 Kyle Buzbee. All rights reserved.</p>
+  </footer>
+
+  <!-- External Scripts -->
+  <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <script>
+    // Mobile menu toggle
+    document.getElementById('mobile-menu-btn').onclick = () =>
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+
+    // Scroll spy
+    const sections = document.querySelectorAll('main section[id]');
+    const navLinks = document.querySelectorAll('.nav-link');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        const link = document.querySelector(`.nav-link[href="#${e.target.id}"]`);
+        if (e.isIntersecting) {
+          navLinks.forEach(n => n.classList.remove('text-indigo-600'));
+          link.classList.add('text-indigo-600');
+        }
+      });
+    }, { threshold: 0.6 });
+    sections.forEach(s => observer.observe(s));
+
+    // Back to top
+    const btt = document.getElementById('back-to-top');
+    window.addEventListener('scroll', () => {
+      btt.style.display = window.scrollY > 300 ? 'block' : 'none';
+    });
+    btt.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    // Dark/light toggle
+    const themeToggle = document.querySelector('[data-theme-toggle]');
+    const root = document.documentElement;
+    const storedTheme = localStorage.getItem('theme');
+    if (storedTheme) root.classList.add(storedTheme);
+    themeToggle.onclick = () => {
+      if (root.classList.toggle('dark')) localStorage.setItem('theme','dark');
+      else localStorage.removeItem('theme');
+    };
+
+    // Font-size adjust
+    const decrease = document.querySelector('[data-font-decrease]');
+    const increase = document.querySelector('[data-font-increase]');
+    const savedSize = localStorage.getItem('fontSize');
+    if (savedSize) document.documentElement.style.fontSize = savedSize;
+    decrease.onclick = () => {
+      const size = parseFloat(getComputedStyle(document.documentElement).fontSize) - 1;
+      document.documentElement.style.fontSize = size + 'px';
+      localStorage.setItem('fontSize', size + 'px');
+    };
+    increase.onclick = () => {
+      const size = parseFloat(getComputedStyle(document.documentElement).fontSize) + 1;
+      document.documentElement.style.fontSize = size + 'px';
+      localStorage.setItem('fontSize', size + 'px');
+    };
+
+    // Localized greeting
+    const g = document.getElementById('greeting');
+    const h = new Date().getHours();
+    if (h < 12) g.textContent = 'Good morning, I’m Kyle';
+    else if (h < 18) g.textContent = 'Good afternoon, I’m Kyle';
+    else g.textContent = 'Good evening, I’m Kyle';
+
+    // Counter animation
+    const counters = document.querySelectorAll('.counter');
+    const countObserver = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting && !e.target.started) {
+          e.target.started = true;
+          const update = () => {
+            const target = +e.target.dataset.target;
+            const current = +e.target.innerText;
+            const inc = Math.ceil(target / 200);
+            if (current < target) {
+              e.target.innerText = current + inc;
+              setTimeout(update, 10);
+            } else e.target.innerText = target;
+          };
+          update();
+        }
+      });
+    }, { threshold: 1 });
+    counters.forEach(c => countObserver.observe(c));
+
+    // Timeline details on click
+    document.querySelectorAll('.timeline-item').forEach(item => {
+      item.onclick = () => {
+        document.getElementById('timeline-details').textContent = item.dataset.details;
+      };
+    });
+
+    // Testimonials slider
+    let idx = 0;
+    const slides = document.getElementById('slides');
+    const total = slides.children.length;
+    document.getElementById('prev-slide').onclick = () => {
+      idx = (idx - 1 + total) % total;
+      slides.style.transform = `translateX(-${idx * 100}%)`;
+    };
+    document.getElementById('next-slide').onclick = () => {
+      idx = (idx + 1) % total;
+      slides.style.transform = `translateX(-${idx * 100}%)`;
+    };
+
+    // Project modals
+    const projects = {
+      1: {
+        title: 'Business Expense App',
+        img: 'expense-app.png',
+        desc: 'Full-stack platform for expense & revenue tracking, P&L reporting, and cost analysis.'
+      },
+      2: {
+        title: 'Preventive Maintenance',
+        img: 'maintenance.png',
+        desc: 'Proactive schedule reducing depreciation costs by 25% and equipment downtime.'
+      }
+    };
+    document.querySelectorAll('.project-card').forEach(card => {
+      card.onclick = () => {
+        const p = projects[card.dataset.project];
+        document.getElementById('modal-body').innerHTML = `
+          <h3 class="text-xl font-semibold">${p.title}</h3>
+          <img src="${p.img}" alt="${p.title}" loading="lazy" class="my-4 rounded"/>
+          <p>${p.desc}</p>`;
+        document.getElementById('project-modals').style.display = 'flex';
+      };
+    });
+    document.querySelectorAll('.modal-close').forEach(x => {
+      x.onclick = () => document.getElementById('project-modals').style.display = 'none';
+    });
+    window.onclick = e => {
+      if (e.target.id === 'project-modals') e.target.style.display = 'none';
+    };
+  </script>
 </body>
 </html>
+
