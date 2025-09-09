@@ -4,7 +4,7 @@ Welcome to my personal portfolio website, built to showcase my experience, skill
 
 ## 🌟 Live Demo
 
-You can view the live site here: [https://yourusername.github.io/portfolio](https://kyletbuzbee.github.io/portfolio)  
+You can view the live site here: [https://kyletbuzbee.github.io/portfolio](https://kyletbuzbee.github.io/portfolio)  
 
 ---
 
