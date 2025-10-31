@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Our Work — Code & Caliber</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style type="text/tailwindcss">
+    :root{
+      --bg:#f5f7fa; --muted:#8b98a6; --primary:#0b1220; --accent:#ff5a3c;
+    }
+    body{font-family:Inter,system-ui;margin:0;padding:0;background:var(--bg);color:var(--primary)}
+    .glass{backdrop-filter:blur(6px); background:linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,255,255,0.45)); border:1px solid rgba(255,255,255,0.4)}
+    @media (prefers-color-scheme: dark){ :root{--bg:#071228;--muted:#9fb0bd;--primary:#e8f2ff} .glass{background:linear-gradient(180deg, rgba(7,18,36,0.44), rgba(7,18,36,0.32)); border:1px solid rgba(255,255,255,0.04)} }
+    .project { transition: transform .22s ease, opacity .22s ease; }
+    .project:hover { transform: translateY(-6px); }
+  </style>
+</head>
+<body>
+  <div class="container mx-auto px-6 py-10">
+    <header class="flex items-center justify-between mb-8">
+      <a href="index.html" class="font-serif" style="font-family:Merriweather, serif;"><strong>Code & Caliber</strong></a>
+      <nav class="flex gap-6 text-sm text-[var(--muted)]">
+        <a href="index.html">Home</a>
+        <a href="#work" class="font-medium">Our Work</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section class="mb-8">
+      <h1 class="text-3xl font-semibold">Our Work</h1>
+      <p class="text-[var(--muted)] mt-2">A showcase of bespoke solutions we've crafted for ambitious partners.</p>
+    </section>
+
+    <!-- Filter Bar -->
+    <section class="mb-6">
+      <div class="flex gap-3">
+        <button class="filter-btn px-4 py-2 rounded-md glass" data-filter="all">All</button>
+        <button class="filter-btn px-4 py-2 rounded-md" data-filter="web">Web Applications</button>
+        <button class="filter-btn px-4 py-2 rounded-md" data-filter="mobile">Mobile Apps</button>
+        <button class="filter-btn px-4 py-2 rounded-md" data-filter="ui">UI/UX Design</button>
+      </div>
+    </section>
+
+    <!-- Masonry/Asymmetrical Grid -->
+    <section id="work" class="grid md:grid-cols-3 gap-6">
+      <article id="proj-1" class="project glass p-4 rounded-lg" data-tags="web">
+        <a href="#" class="open-case" data-id="proj-1">
+          <div class="h-44 rounded-md bg-gradient-to-br from-[#0b1220] to-[#24303b] mb-3"></div>
+          <h3 class="font-semibold">Aurora Finance</h3>
+          <p class="text-sm text-[var(--muted)] mt-1">Real-time finance dashboard · React · TypeScript</p>
+        </a>
+      </article>
+
+      <article id="proj-2" class="project glass p-4 rounded-lg" data-tags="mobile">
+        <a href="#" class="open-case" data-id="proj-2">
+          <div class="h-52 rounded-md bg-gradient-to-br from-[#ff5a3c] to-[#ff9273] mb-3"></div>
+          <h3 class="font-semibold">Nomad Trails</h3>
+          <p class="text-sm text-[var(--muted)] mt-1">Offline-first travel guide · Flutter · Firebase</p>
+        </a>
+      </article>
+
+      <article id="proj-3" class="project glass p-4 rounded-lg" data-tags="ui">
+        <a href="#" class="open-case" data-id="proj-3">
+          <div class="h-32 rounded-md bg-gradient-to-br from-[#b8ff2f] to-[#7efca0] mb-3"></div>
+          <h3 class="font-semibold">Foundry Studio</h3>
+          <p class="text-sm text-[var(--muted)] mt-1">Design system and component library</p>
+        </a>
+      </article>
+
+      <article id="proj-4" class="project glass p-4 rounded-lg" data-tags="web">
+        <a href="#" class="open-case" data-id="proj-4">
+          <div class="h-40 rounded-md bg-gradient-to-br from-[#6b21a8] to-[#a78bfa] mb-3"></div>
+          <h3 class="font-semibold">MarketCraft</h3>
+          <p class="text-sm text-[var(--muted)] mt-1">B2B marketplace · Next.js · GraphQL</p>
+        </a>
+      </article>
+
+      <article id="proj-5" class="project glass p-4 rounded-lg" data-tags="mobile ui">
+        <a href="#" class="open-case" data-id="proj-5">
+          <div class="h-48 rounded-md bg-gradient-to-br from-[#0ea5a4] to-[#34d399] mb-3"></div>
+          <h3 class="font-semibold">Pulse Health</h3>
+          <p class="text-sm text-[var(--muted)] mt-1">Patient engagement app · React Native</p>
+        </a>
+      </article>
+
+      <article id="proj-6" class="project glass p-4 rounded-lg" data-tags="web ui">
+        <a href="#" class="open-case" data-id="proj-6">
+          <div class="h-36 rounded-md bg-gradient-to-br from-[#f97316] to-[#fb923c] mb-3"></div>
+          <h3 class="font-semibold">Civic Connect</h3>
+          <p class="text-sm text-[var(--muted)] mt-1">Open data portal · Accessibility-first</p>
+        </a>
+      </article>
+    </section>
+
+    <!-- Modal -->
+    <div id="caseModal" class="fixed inset-0 hidden items-center justify-center z-50">
+      <div class="absolute inset-0 bg-black/40"></div>
+      <div class="relative max-w-5xl w-full mx-6 glass rounded-xl p-6 overflow-auto max-h-[90vh]" role="dialog" aria-modal="true" aria-labelledby="caseTitle">
+        <button id="closeModal" class="absolute top-4 right-4 px-3 py-1 rounded bg-white/60">Close</button>
+        <div id="caseContent"></div>
+      </div>
+    </div>
+
+    <footer class="mt-12 text-sm text-[var(--muted)]">
+      <div class="flex items-center justify-between">
+        <div><strong>Code & Caliber</strong></div>
+        <div>© <span id="year2"></span> Code & Caliber.</div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

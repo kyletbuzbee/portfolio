@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Aurora Finance — Case Study</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style type="text/tailwindcss">
+    :root{--bg:#f5f7fa;--muted:#8b98a6;--primary:#0b1220;--accent:#ff5a3c}
+    body{font-family:Inter,system-ui;margin:0;padding:2rem;background:var(--bg);color:var(--primary)}
+    .glass{backdrop-filter:blur(6px); background:linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,255,255,0.45)); border:1px solid rgba(255,255,255,0.4)}
+  </style>
+</head>
+<body>
+  <main class="max-w-6xl mx-auto">
+    <a href="portfolio.html" class="text-sm text-[var(--muted)]">← Back to Our Work</a>
+    <header class="mt-6 mb-8">
+      <h1 class="text-3xl font-serif" style="font-family:Merriweather, serif;">Aurora Finance</h1>
+      <p class="text-[var(--muted)] mt-2">Real-time finance dashboard · React · TypeScript</p>
+    </header>
+
+    <section class="glass rounded-xl p-6 mb-6">
+      <div class="h-60 bg-gradient-to-br from-[#0b1220] to-[#24303b] rounded-md mb-4"></div>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div><h4 class="font-semibold">Client</h4><p class="text-[var(--muted)]">Aurora Finance</p></div>
+        <div><h4 class="font-semibold">Industry</h4><p class="text-[var(--muted)]">Fintech</p></div>
+        <div><h4 class="font-semibold">Services</h4><p class="text-[var(--muted)]">Web App, Design System, API</p></div>
+      </div>
+    </section>
+
+    <section class="mb-6">
+      <h3 class="font-semibold">The Challenge</h3>
+      <p class="text-[var(--muted)] mt-2">Aurora needed a high-performance dashboard to surface near-real-time analytics while preserving auditability and compliance controls.</p>
+    </section>
+
+    <section class="mb-6">
+      <h3 class="font-semibold">The Solution</h3>
+      <p class="text-[var(--muted)] mt-2">We built a modular React app with streaming updates, role-based dashboards, and an extensible design system for consistent cross-team delivery.</p>
+      <div class="grid md:grid-cols-3 gap-4 mt-4">
+        <div class="h-40 rounded-md bg-gradient-to-br from-[#0b1220] to-[#374151]"></div>
+        <div class="h-40 rounded-md bg-gradient-to-br from-[#06b6d4] to-[#0ea5a4]"></div>
+        <div class="h-40 rounded-md bg-gradient-to-br from-[#f97316] to-[#fb923c]"></div>
+      </div>
+    </section>
+
+    <section class="mb-6">
+      <h3 class="font-semibold">Key Features</h3>
+      <ul class="list-disc ml-6 text-[var(--muted)] mt-2">
+        <li>Real-time streaming analytics with graceful fallbacks.</li>
+        <li>Role-based dashboards and audit logs.</li>
+        <li>Accessible design system and motion guidelines.</li>
+        <li>Continuous delivery pipeline and staged rollouts.</li>
+      </ul>
+    </section>
+
+    <section class="mb-8">
+      <h3 class="font-semibold">Client Testimonial</h3>
+      <blockquote class="italic text-lg mt-2">"We launched faster than expected and our users praised the clarity and speed of the new product."</blockquote>
+    </section>
+
+    <nav class="flex gap-4">
+      <a href="portfolio.html" class="px-4 py-2 rounded bg-white/60">Previous Project</a>
+      <a href="portfolio.html" class="px-4 py-2 rounded" style="background:var(--accent); color:white">Next Project</a>
+    </nav>
+  </main>
+</body>
+</html>
