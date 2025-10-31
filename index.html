@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
@@ -1508,3 +1509,544 @@
   </script>
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kyle Buzbee – Data-Driven Operations Manager</title>
+  <meta name="description" content="Kyle Buzbee: optimizing asset-intensive operations with data analytics, process design, and leadership."/>
+  <meta property="og:title" content="Kyle Buzbee – Data-Driven Operations Manager"/>
+  <meta property="og:description" content="Data-driven operations manager specializing in process optimization and team leadership."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://yourdomain.com/"/>
+  <meta property="og:image" content="https://yourdomain.com/og-image.jpg"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style"
+        onload="this.onload=null;this.rel='stylesheet'"/>
+  <script>tailwind = { config: { darkMode: 'class' } }</script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXX');
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Kyle Buzbee",
+    "jobTitle": "Data-Driven Operations Manager",
+    "url": "https://kyletbuzbee.github.io/portfolio/",
+    "sameAs": ["https://linkedin.com/in/kyle-buzbee"],
+    "image": "https://kyletbuzbee.github.io/portfolio/headshot.jpg"
+  }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    .timeline { position: relative; padding-left: 1rem; }
+    .timeline::before { content: ""; position: absolute; left: 0.5rem; top: 0; width: 2px; height: 100%; background: #e5e7eb; }
+    .timeline-item { position: relative; margin-bottom: 2rem; padding-left: 1.5rem; }
+    .timeline-item::before { content: ""; position: absolute; left: 0.25rem; top: 0.25rem; width: 0.5rem; height: 0.5rem; border-radius: 50%; background: #2563eb; }
+    #back-to-top { display: none; position: fixed; bottom: 2rem; right: 2rem; background: #2563eb; color: white; padding: 0.75rem; border-radius: 0.375rem; z-index: 50; }
+    [data-theme-toggle] { cursor: pointer; }
+    [data-font-decrease], [data-font-increase] { cursor: pointer; }
+    .modal { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.6); justify-content: center; align-items: center; z-index: 100;}
+    .modal-content { background: white; max-width: 90%; width: 36rem; padding: 1.5rem; border-radius: 0.5rem; position: relative; }
+    .dark .modal-content { background: #1f2937; }
+    .modal-close { position: absolute; top: 0.5rem; right: 0.75rem; cursor: pointer; font-size: 1.5rem; }
+  </style>
+</head>
+<body class="bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-100 antialiased">
+  <!-- BACK TO TOP -->
+  <button id="back-to-top" aria-label="Back to top">↑</button>
+
+  <!-- HEADER & NAV -->
+  <header class="bg-white dark:bg-gray-800 shadow sticky top-0 z-40">
+    <nav class="container mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="#" class="text-2xl font-bold text-indigo-600">Kyle Buzbee</a>
+      <ul id="nav-links" class="hidden md:flex space-x-8 text-gray-600 dark:text-gray-300">
+        <li><a href="#hero" class="nav-link hover:text-indigo-600">Home</a></li>
+        <li><a href="#about" class="nav-link hover:text-indigo-600">About</a></li>
+        <li><a href="#experience" class="nav-link hover:text-indigo-600">Experience</a></li>
+        <li><a href="#skills" class="nav-link hover:text-indigo-600">Skills</a></li>
+        <li><a href="#projects" class="nav-link hover:text-indigo-600">Projects</a></li>
+        <li><a href="#contact" class="nav-link hover:text-indigo-600">Contact</a></li>
+      </ul>
+      <div class="flex items-center space-x-4">
+        <button data-font-decrease class="text-xl">A–</button>
+        <button data-font-increase class="text-xl">A+</button>
+        <button data-theme-toggle class="text-2xl">🌓</button>
+        <button id="mobile-menu-btn" class="md:hidden focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </nav>
+    <div id="mobile-menu" class="md:hidden hidden px-6 pb-4 bg-white dark:bg-gray-800">
+      <ul class="space-y-2 text-gray-600 dark:text-gray-300">
+        <li><a href="#hero" class="block nav-link hover:text-indigo-600">Home</a></li>
+        <li><a href="#about" class="block nav-link hover:text-indigo-600">About</a></li>
+        <li><a href="#experience" class="block nav-link hover:text-indigo-600">Experience</a></li>
+        <li><a href="#skills" class="block nav-link hover:text-indigo-600">Skills</a></li>
+        <li><a href="#projects" class="block nav-link hover:text-indigo-600">Projects</a></li>
+        <li><a href="#contact" class="block nav-link hover:text-indigo-600">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="container mx-auto px-6 py-12 space-y-24">
+    <!-- HERO -->
+    <section id="hero" class="flex flex-col-reverse md:flex-row items-center gap-12">
+      <div class="md:w-1/2 space-y-6">
+        <h1 id="greeting" class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-gray-100"></h1>
+        <p class="text-lg text-gray-600 dark:text-gray-300">
+          I optimize asset-intensive operations using data analytics, process design, and team leadership. Over 6 years, I’ve driven profitability, efficiency, and growth in scrap-metal recycling, transportation, and rental services.
+        </p>
+        <div class="flex space-x-4">
+          <a href="#contact" class="bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition">Get in Touch</a>
+          <a href="#experience" class="border border-indigo-600 text-indigo-600 px-6 py-3 rounded-lg hover:bg-indigo-50 dark:hover:bg-gray-700 transition">View Experience</a>
+        </div>
+      </div>
+      <div class="md:w-1/2 text-center">
+        <img src="https://kyletbuzbee.github.io/portfolio/headshot.jpg" alt="Kyle Buzbee" loading="lazy"
+             class="w-64 h-64 rounded-full mx-auto shadow-xl"/>
+      </div>
+    </section>
+
+    <!-- METRICS -->
+    <section id="metrics" class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+      <div>
+        <h3 class="text-4xl font-semibold counter" data-target="120">0</h3>
+        <p class="text-gray-600 dark:text-gray-300">Tons Processed /mo</p>
+      </div>
+      <div>
+        <h3 class="text-4xl font-semibold counter" data-target="30">0</h3>
+        <p class="text-gray-600 dark:text-gray-300">% Downtime ↓</p>
+      </div>
+      <div>
+        <h3 class="text-4xl font-semibold counter" data-target="15">0</h3>
+        <p class="text-gray-600 dark:text-gray-300">% Repeat Business ↑</p>
+      </div>
+      <div>
+        <h3 class="text-4xl font-semibold counter" data-target="6">0</h3>
+        <p class="text-gray-600 dark:text-gray-300">Years Experience</p>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <h2 class="text-3xl font-semibold text-indigo-600">About Me</h2>
+        <p class="mt-4 text-gray-700 dark:text-gray-300">
+          Passionate about continuous improvement and building scalable systems. Expertise in P&amp;L oversight, dashboard development, preventive maintenance, and data-driven team leadership.
+        </p>
+      </div>
+      <ul class="space-y-4 list-disc list-inside text-gray-700 dark:text-gray-300">
+        <li>Oversee $5M+ annual budgets with rigorous controls.</li>
+        <li>Cut reporting time by 80% via Power BI dashboards.</li>
+        <li>Reduced downtime 25% with proactive maintenance.</li>
+        <li>Led teams of 20+ to exceed performance targets.</li>
+      </ul>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience">
+      <h2 class="text-3xl font-semibold text-indigo-600 text-center mb-8">Professional Experience</h2>
+      <div class="timeline">
+        <div class="timeline-item" data-details="Processed 120+ tons/month; reduced downtime 30%; increased repeat business 15%.">
+          <h3 class="cursor-pointer font-semibold text-lg">Branch Manager<br><small class="text-gray-500 dark:text-gray-400">K&amp;L Recycling · Tyler, TX · Aug 2024–Present</small></h3>
+        </div>
+        <div class="timeline-item" data-details="Scaled fleet revenue +40%; grew cash flow 1,113%; cut costs 30%.">
+          <h3 class="cursor-pointer font-semibold text-lg">Branch Manager<br><small class="text-gray-500 dark:text-gray-400">Enterprise Rentals · Tyler, TX · Apr 2020–Aug 2024</small></h3>
+        </div>
+        <div class="timeline-item" data-details="Managed 400+ accounts; drove $150K+ revenue; boosted efficiency 22%.">
+          <h3 class="cursor-pointer font-semibold text-lg">Regional Manager<br><small class="text-gray-500 dark:text-gray-400">Texas Green Turf · Tyler, TX · Aug 2018–Apr 2020</small></h3>
+        </div>
+      </div>
+      <p id="timeline-details" class="mt-4 text-gray-700 dark:text-gray-300 italic"></p>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <h2 class="text-3xl font-semibold text-indigo-600 text-center mb-8">Core Competencies</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div class="bg-white dark:bg-gray-800 rounded-xl shadow p-6 text-center hover:shadow-lg transition">
+          <h4 class="font-semibold mb-2">Financial Structuring</h4>
+          <p class="text-sm text-gray-600 dark:text-gray-300">Budgeting · Forecasting · Cost Reduction</p>
+        </div>
+        <div class="bg-white dark:bg-gray-800 rounded-xl shadow p-6 text-center hover:shadow-lg transition">
+          <h4 class="font-semibold mb-2">Dashboard Dev</h4>
+          <p class="text-sm text-gray-600 dark:text-gray-300">Excel · Power BI · SQL</p>
+        </div>
+        <div class="bg-white dark:bg-gray-800 rounded-xl shadow p-6 text-center hover:shadow-lg transition">
+          <h4 class="font-semibold mb-2">Process Opt</h4>
+          <p class="text-sm text-gray-600 dark:text-gray-300">Workflow · Inventory · Vendor</p>
+        </div>
+        <div class="bg-white dark:bg-gray-800 rounded-xl shadow p-6 text-center hover:shadow-lg transition">
+          <h4 class="font-semibold mb-2">Team Leadership</h4>
+          <p class="text-sm text-gray-600 dark:text-gray-300">Mentorship · Hiring · Performance</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <h2 class="text-3xl font-semibold text-indigo-600 text-center mb-8">Key Projects</h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Card 1 -->
+        <div class="bg-white dark:bg-gray-800 rounded-xl shadow p-6 hover:shadow-lg transition cursor-pointer project-card" data-project="1">
+          <h4 class="font-semibold text-xl mb-2">Business Expense App</h4>
+          <p class="text-gray-700 dark:text-gray-300 mb-4">A full-stack app to streamline financial tracking with P&L reporting.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 text-sm px-2 py-1 rounded">React</span>
+            <span class="bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200 text-sm px-2 py-1 rounded">Python</span>
+            <span class="bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200 text-sm px-2 py-1 rounded">Flask</span>
+          </div>
+        </div>
+        <!-- Card 2 -->
+         <div class="bg-white dark:bg-gray-800 rounded-xl shadow p-6 hover:shadow-lg transition cursor-pointer project-card" data-project="2">
+          <h4 class="font-semibold text-xl mb-2">Customer Segmentation</h4>
+          <p class="text-gray-700 dark:text-gray-300 mb-4">K-Means clustering model to identify distinct customer groups.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200 text-sm px-2 py-1 rounded">Python</span>
+            <span class="bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200 text-sm px-2 py-1 rounded">scikit-learn</span>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="bg-white dark:bg-gray-800 rounded-xl shadow p-6 hover:shadow-lg transition cursor-pointer project-card" data-project="3">
+          <h4 class="font-semibold text-xl mb-2">Stock Trading Bot</h4>
+          <p class="text-gray-700 dark:text-gray-300 mb-4">Hybrid bot using LSTM, ARIMA & GARCH for automated trading.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200 text-sm px-2 py-1 rounded">Python</span>
+            <span class="bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 text-sm px-2 py-1 rounded">TensorFlow</span>
+          </div>
+        </div>
+        <!-- Card 4 -->
+        <div class="bg-white dark:bg-gray-800 rounded-xl shadow p-6 hover:shadow-lg transition cursor-pointer project-card" data-project="4">
+          <h4 class="font-semibold text-xl mb-2">Financial Wellness Dashboard</h4>
+          <p class="text-gray-700 dark:text-gray-300 mb-4">Interactive Power BI dashboard to visualize key financial metrics.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200 text-sm px-2 py-1 rounded">Power BI</span>
+            <span class="bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-200 text-sm px-2 py-1 rounded">Data Viz</span>
+          </div>
+        </div>
+        <!-- Card 5 -->
+        <div class="bg-white dark:bg-gray-800 rounded-xl shadow p-6 hover:shadow-lg transition cursor-pointer project-card" data-project="5">
+          <h4 class="font-semibold text-xl mb-2">Preventive Maintenance</h4>
+          <p class="text-gray-700 dark:text-gray-300 mb-4">Scheduled plan cutting depreciation costs 25% and downtime.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200 text-sm px-2 py-1 rounded">Asset Mgmt</span>
+            <span class="bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-200 text-sm px-2 py-1 rounded">Efficiency</span>
+          </div>
+        </div>
+        <!-- Card 6 -->
+        <div class="bg-white dark:bg-gray-800 rounded-xl shadow p-6 hover:shadow-lg transition cursor-pointer project-card" data-project="6">
+          <h4 class="font-semibold text-xl mb-2">ML Stock Trading Bot</h4>
+          <p class="text-gray-700 dark:text-gray-300 mb-4">Automated trading system using ML for market analysis.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200 text-sm px-2 py-1 rounded">Python</span>
+            <span class="bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200 text-sm px-2 py-1 rounded">Machine Learning</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Modal container -->
+    <div id="project-modals" class="modal">
+      <div class="modal-content">
+        <span class="modal-close text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200">&times;</span>
+        <div id="modal-body" class="space-y-4"></div>
+      </div>
+    </div>
+
+    <!-- TESTIMONIALS -->
+    <section id="testimonials" class="space-y-6">
+      <h2 class="text-3xl font-semibold text-indigo-600 text-center">Testimonials</h2>
+      <div class="relative overflow-hidden max-w-2xl mx-auto">
+        <div id="slides" class="flex transition-transform duration-500 ease-in-out">
+          <blockquote class="w-full flex-shrink-0 p-6 bg-white dark:bg-gray-800 rounded-xl shadow text-center">
+            “Kyle’s data-driven approach transformed our operations—downtime is nearly zero now.”<br/><cite class="mt-4 block text-sm text-gray-500 dark:text-gray-400">– Operations Partner</cite>
+          </blockquote>
+          <blockquote class="w-full flex-shrink-0 p-6 bg-white dark:bg-gray-800 rounded-xl shadow text-center">
+            “His preventive maintenance strategy saved us thousands in depreciation and repair costs.”<br/><cite class="mt-4 block text-sm text-gray-500 dark:text-gray-400">– Fleet Manager</cite>
+          </blockquote>
+        </div>
+        <button id="prev-slide" class="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-full px-3 py-1 bg-indigo-600 text-white rounded-full">‹</button>
+        <button id="next-slide" class="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-full px-3 py-1 bg-indigo-600 text-white rounded-full">›</button>
+      </div>
+    </section>
+
+    <!-- CONTACT & CALENDLY & NEWSLETTER -->
+    <section id="contact" class="grid md:grid-cols-2 gap-12">
+      <div>
+        <h2 class="text-3xl font-semibold text-indigo-600 mb-4">Let’s Connect</h2>
+        <form id="contact-form" class="space-y-4">
+          <div>
+            <label class="block text-gray-700 dark:text-gray-300">Name</label>
+            <input type="text" name="name" required class="w-full mt-1 p-2 border dark:border-gray-600 rounded bg-gray-100 dark:bg-gray-700"/>
+          </div>
+          <div>
+            <label class="block text-gray-700 dark:text-gray-300">Email</label>
+            <input type="email" name="email" required class="w-full mt-1 p-2 border dark:border-gray-600 rounded bg-gray-100 dark:bg-gray-700"/>
+          </div>
+          <div>
+            <label class="block text-gray-700 dark:text-gray-300">Message</label>
+            <textarea name="message" rows="4" required class="w-full mt-1 p-2 border dark:border-gray-600 rounded bg-gray-100 dark:bg-gray-700"></textarea>
+          </div>
+          <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY"></div>
+          <button type="submit" class="bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition">Send Message</button>
+        </form>
+        <div class="mt-8">
+          <h3 class="font-semibold text-lg text-indigo-600 mb-2">Newsletter</h3>
+          <form id="newsletter-form" class="flex space-x-2">
+            <input type="email" placeholder="Your email" required class="flex-1 p-2 border dark:border-gray-600 rounded bg-gray-100 dark:bg-gray-700"/>
+            <button type="submit" class="bg-indigo-600 text-white px-4 rounded hover:bg-indigo-700">Subscribe</button>
+          </form>
+        </div>
+      </div>
+      <div>
+        <div class="calendly-inline-widget" data-url="https://calendly.com/yourusername" style="min-width:320px;height:580px;"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-white dark:bg-gray-800 py-6">
+    <p class="text-center text-gray-500 dark:text-gray-400 text-sm">&copy; 2025 Kyle Buzbee. All rights reserved.</p>
+  </footer>
+
+  <!-- External Scripts -->
+  <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Mobile menu toggle
+      document.getElementById('mobile-menu-btn').onclick = () =>
+        document.getElementById('mobile-menu').classList.toggle('hidden');
+
+      // Scroll spy
+      const sections = document.querySelectorAll('main section[id]');
+      const navLinks = document.querySelectorAll('.nav-link');
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(e => {
+          const link = document.querySelector(`.nav-link[href="#${e.target.id}"]`);
+          if (e.isIntersecting && link) {
+            navLinks.forEach(n => n.classList.remove('text-indigo-600', 'dark:text-indigo-400'));
+            link.classList.add('text-indigo-600', 'dark:text-indigo-400');
+          }
+        });
+      }, { threshold: 0.6 });
+      sections.forEach(s => observer.observe(s));
+
+      // Back to top
+      const btt = document.getElementById('back-to-top');
+      window.addEventListener('scroll', () => {
+        btt.style.display = window.scrollY > 300 ? 'block' : 'none';
+      });
+      btt.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+
+      // Dark/light toggle
+      const themeToggle = document.querySelector('[data-theme-toggle]');
+      const root = document.documentElement;
+      const storedTheme = localStorage.getItem('theme');
+      if (storedTheme === 'dark' || (!storedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          root.classList.add('dark');
+      }
+      themeToggle.onclick = () => {
+          root.classList.toggle('dark');
+          localStorage.setItem('theme', root.classList.contains('dark') ? 'dark' : 'light');
+      };
+
+      // Font-size adjust
+      const decrease = document.querySelector('[data-font-decrease]');
+      const increase = document.querySelector('[data-font-increase]');
+      const savedSize = localStorage.getItem('fontSize');
+      if (savedSize) document.documentElement.style.fontSize = savedSize;
+      decrease.onclick = () => {
+        const size = parseFloat(getComputedStyle(document.documentElement).fontSize) - 1;
+        document.documentElement.style.fontSize = size + 'px';
+        localStorage.setItem('fontSize', size + 'px');
+      };
+      increase.onclick = () => {
+        const size = parseFloat(getComputedStyle(document.documentElement).fontSize) + 1;
+        document.documentElement.style.fontSize = size + 'px';
+        localStorage.setItem('fontSize', size + 'px');
+      };
+
+      // Localized greeting
+      const g = document.getElementById('greeting');
+      const h = new Date().getHours();
+      if (h < 12) g.textContent = 'Good morning, I’m Kyle';
+      else if (h < 18) g.textContent = 'Good afternoon, I’m Kyle';
+      else g.textContent = 'Good evening, I’m Kyle';
+
+      // Counter animation
+      const counters = document.querySelectorAll('.counter');
+      const countObserver = new IntersectionObserver(entries => {
+        entries.forEach(e => {
+          if (e.isIntersecting && !e.target.started) {
+            e.target.started = true;
+            const target = +e.target.dataset.target;
+            let current = 0;
+            const update = () => {
+              const inc = Math.ceil(target / 100);
+              current += inc;
+              if (current < target) {
+                e.target.innerText = current;
+                requestAnimationFrame(update);
+              } else e.target.innerText = target;
+            };
+            update();
+          }
+        });
+      }, { threshold: 1 });
+      counters.forEach(c => countObserver.observe(c));
+
+      // Timeline details on click
+      document.querySelectorAll('.timeline-item').forEach(item => {
+        item.onclick = () => {
+          document.getElementById('timeline-details').textContent = item.dataset.details;
+        };
+      });
+
+      // Testimonials slider
+      let idx = 0;
+      const slides = document.getElementById('slides');
+      const total = slides.children.length;
+      document.getElementById('prev-slide').onclick = () => {
+        idx = (idx - 1 + total) % total;
+        slides.style.transform = `translateX(-${idx * 100}%)`;
+      };
+      document.getElementById('next-slide').onclick = () => {
+        idx = (idx + 1) % total;
+        slides.style.transform = `translateX(-${idx * 100}%)`;
+      };
+
+      // Project modals
+      const projects = {
+        1: {
+          title: 'Business Expense Management Application',
+          img: 'https://images.unsplash.com/photo-1579621970795-87f54f597340?q=80&w=800&auto=format&fit=crop',
+          desc: 'The Business Expense Management Application is a full-stack web application designed to streamline financial tracking for businesses. Built with React on the frontend and a Python Flask backend, this application provides a user-friendly platform to efficiently manage expenses and revenues.',
+          features: [
+            'Comprehensive expense tracking with detailed descriptions, amounts, and categories',
+            'Revenue management module for tracking income sources',
+            'Automated generation of Profit & Loss statements',
+            'Recurring expense automation with customizable frequencies',
+            'Dynamic filtering and search functionality'
+          ],
+          technologies: ['React', 'Python Flask', 'JavaScript', 'CSS', 'HTML']
+        },
+        2: {
+          title: 'Customer Segmentation with K-Means Clustering',
+          img: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop',
+          desc: 'Developed a customer segmentation model using K-means clustering to identify distinct customer groups based on annual income, spending score, and purchase history.',
+          features: [
+            'Identified three distinct customer segments with varying spending behaviors',
+            'Enabled targeted marketing strategies based on customer clusters',
+            'Analyzed patterns for high-value, moderate, and low-value customer groups'
+          ],
+          technologies: ['Python', 'scikit-learn', 'K-means clustering', 'matplotlib', 'seaborn']
+        },
+        3: {
+          title: 'Hybrid Stock Trading Bot with LSTM, ARIMA, and GARCH',
+          img: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?q=80&w=800&auto=format&fit=crop',
+          desc: 'Designed and implemented a hybrid stock trading bot that combines LSTM, ARIMA, GARCH models, and a classical ML classifier to generate trading signals for automated trading.',
+          features: [
+            'Combines multiple predictive models for enhanced accuracy',
+            'LSTM for capturing temporal patterns in stock prices',
+            'ARIMA for time series forecasting & GARCH for volatility modeling',
+            'Backtesting framework to evaluate strategy performance'
+          ],
+          technologies: ['Python', 'TensorFlow/Keras', 'statsmodels', 'arch', 'yfinance']
+        },
+        4: {
+          title: 'Financial Wellness Dashboard with Power BI',
+          img: 'https://images.unsplash.com/photo-1604328727589-912e5235f3d9?q=80&w=800&auto=format&fit=crop',
+          desc: 'Created an interactive financial wellness dashboard using Power BI to visualize key financial metrics, such as available balance, monthly spending, credit score, and savings rate.',
+          features: [
+            'Comprehensive visualization of financial health metrics',
+            'Interactive filters for customized data views',
+            'Monthly spending analysis with category breakdown',
+            'Savings rate and credit score monitoring and trends'
+          ],
+          technologies: ['Power BI', 'Data Visualization', 'DAX', 'Data Modeling']
+        },
+        5: {
+          title: 'Preventive Maintenance System',
+          img: 'https://images.unsplash.com/photo-1581092916315-9bac3214a4a0?q=80&w=800&auto=format&fit=crop',
+          desc: 'Proactive maintenance schedule reducing depreciation costs by 25% and equipment downtime through systematic planning and execution.',
+          features: [
+            'Reduced equipment downtime by over 25%',
+            'Cut depreciation and long-term repair costs significantly',
+            'Extended equipment lifespan through proactive care',
+            'Streamlined maintenance scheduling and tracking'
+          ],
+          technologies: ['Asset Management', 'Preventive Maintenance', 'Cost Reduction', 'Efficiency']
+        },
+        6: {
+          title: 'Machine Learning Stock Trading Bot',
+          img: 'https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?q=80&w=800&auto=format&fit=crop',
+          desc: 'Automated trading system using machine learning algorithms for market analysis and trade execution.',
+          features: [
+            'Machine learning-based market analysis and signal generation',
+            'Automated trade execution based on algorithmic signals',
+            'Implemented risk management protocols to minimize losses',
+            'Adaptive learning from evolving market patterns'
+          ],
+          technologies: ['Python', 'Machine Learning', 'Algorithmic Trading', 'Risk Management']
+        }
+      };
+      
+      const modal = document.getElementById('project-modals');
+      const modalBody = document.getElementById('modal-body');
+
+      document.querySelectorAll('.project-card').forEach(card => {
+        card.onclick = () => {
+          const p = projects[card.dataset.project];
+          if(!p) return;
+
+          let featuresHTML = '';
+          if (p.features && p.features.length) {
+            featuresHTML = '<h4 class="font-semibold mt-4">Key Features:</h4><ul class="list-disc list-inside ml-4 space-y-1">';
+            p.features.forEach(feature => {
+              featuresHTML += `<li>${feature}</li>`;
+            });
+            featuresHTML += '</ul>';
+          }
+          
+          let techHTML = '';
+          if (p.technologies && p.technologies.length) {
+            techHTML = '<h4 class="font-semibold mt-4">Technologies:</h4><div class="flex flex-wrap gap-2 mt-2">';
+            p.technologies.forEach(tech => {
+              techHTML += `<span class="bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-200 text-sm px-2 py-1 rounded">${tech}</span>`;
+            });
+            techHTML += '</div>';
+          }
+          
+          modalBody.innerHTML = `
+            <h3 class="text-xl font-semibold">${p.title}</h3>
+            <img src="${p.img}" alt="${p.title}" loading="lazy" class="my-4 rounded-lg shadow-md w-full object-cover h-48"/>
+            <p>${p.desc}</p>
+            ${featuresHTML}
+            ${techHTML}`;
+          modal.style.display = 'flex';
+        };
+      });
+      
+      document.querySelector('.modal-close').onclick = () => modal.style.display = 'none';
+      
+      window.onclick = e => {
+        if (e.target === modal) modal.style.display = 'none';
+      };
+    });
+  </script>
+</body>
+</html>
+
+
+
+>>>>>>> 0fd4e34d3324d6b1fb77060a12f6e18eabab3c5d
