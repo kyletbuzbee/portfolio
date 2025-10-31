@@ -1,3 +1,0 @@
-- [ ] Add all changes to git (git add .)
-- [ ] Commit changes with appropriate message
-- [ ] Push to GitHub repository (www.github.com/kyletbuzbee/portfolio)
