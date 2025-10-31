@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Code & Caliber — Digital Craftsmanship</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind-like utilities block (inline styles allowed) -->
+  <style type="text/tailwindcss">
+    :root{
+      --bg:#f5f7fa;
+      --card:#ffffff;
+      --muted:#8b98a6;
+      --primary:#0b1220; /* deep charcoal */
+      --accent:#ff5a3c;  /* vermillion */
+      --accent-2:#b8ff2f; /* electric lime for micro accents */
+    }
+    html,body,#app{height:100%}
+    body{
+      font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;
+      margin:0;
+      background:linear-gradient(180deg,var(--bg),#eef2f6);
+      color:var(--primary);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+    .glass { backdrop-filter: blur(6px); background: linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,255,255,0.45)); border:1px solid rgba(255,255,255,0.4); }
+    @media (prefers-color-scheme: dark){
+      :root{--bg:#071228;--card:#071428;--muted:#9fb0bd;--primary:#e8f2ff}
+      .glass{background:linear-gradient(180deg, rgba(7,18,36,0.44), rgba(7,18,36,0.32)); border:1px solid rgba(255,255,255,0.04)}
+    }
+
+    /* hero canvas + hero layout */
+    .hero-canvas { position:absolute; inset:0; z-index:0 }
+    .hero-layer { position:relative; z-index:5 }
+    .scramble { display:inline-block; white-space:nowrap; }
+    .magnet { transition: transform .22s cubic-bezier(.2,.9,.3,1); will-change: transform; }
+    .cursor-dot{position:fixed;pointer-events:none;width:10px;height:10px;border-radius:50%;background:var(--accent);transform:translate(-50%,-50%);z-index:9999}
+    .cursor-outer{position:fixed;pointer-events:none;width:36px;height:36px;border-radius:50%;border:2px solid rgba(11,18,32,.08);transform:translate(-50%,-50%);z-index:9998}
+  </style>
+
+  <!-- three.js minimal lib for hero sculpture -->
+  <script src="https://unpkg.com/three@0.162.0/build/three.min.js"></script>
+</head>
+<body>
+  <div id="app" class="min-h-screen flex flex-col">
+    <div id="cursorDot" class="cursor-dot"></div>
+    <div id="cursorOuter" class="cursor-outer"></div>
+
+    <!-- Header -->
+    <header class="w-full glass px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-6">
+        <a href="#" class="text-xl font-serif" style="font-family:Merriweather, serif;"><strong>Code & Caliber</strong></a>
+        <nav class="hidden md:flex gap-6 text-sm text-[var(--muted)]">
+          <a href="#" class="hover:text-[var(--primary)]">Home</a>
+          <a href="#services" class="hover:text-[var(--primary)]">Services</a>
+          <a href="portfolio.html" class="hover:text-[var(--primary)]">Our Work</a>
+          <a href="#philosophy" class="hover:text-[var(--primary)]">Philosophy</a>
+          <a href="#contact" class="hover:text-[var(--primary)]">Contact</a>
+        </nav>
+      </div>
+      <div>
+        <a href="#contact" class="magnet px-4 py-2 rounded-md text-white" style="background:var(--accent);">Start Your Project</a>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="relative flex-1 overflow-hidden">
+      <canvas id="heroCanvas" class="hero-canvas" aria-hidden="true"></canvas>
+
+      <div class="hero-layer container mx-auto px-6 py-20">
+        <div class="grid md:grid-cols-2 gap-8 items-center">
+          <div class="max-w-2xl">
+            <p class="text-sm uppercase tracking-widest text-[var(--accent-2)] mb-3">Digital Craftsmanship</p>
+            <h1 class="text-4xl md:text-5xl font-serif" style="font-family:Merriweather, serif; color:var(--primary)">
+              <span class="scramble" data-text="We Forge High-Caliber Web & Mobile Apps.">We Forge High-Caliber Web & Mobile Apps.</span>
+            </h1>
+            <p class="mt-6 text-lg text-[var(--muted)]">A bespoke studio for brands that demand precision, polish, and lasting product value.</p>
+
+            <div class="mt-8 flex gap-4">
+              <a href="portfolio.html" class="magnet px-5 py-3 rounded-md glass">View Our Work</a>
+              <a href="#contact" class="magnet px-5 py-3 rounded-md" style="background:var(--accent); color:white;">Book a Call</a>
+            </div>
+
+            <div class="mt-8 flex gap-6 text-sm text-[var(--muted)]">
+              <div class="flex items-center gap-3"><span class="w-3 h-3 rounded-full" style="background:var(--accent-2)"></span><span>Precision engineering</span></div>
+              <div class="flex items-center gap-3"><span class="w-3 h-3 rounded-full" style="background:var(--accent)"></span><span>Bespoke experiences</span></div>
+            </div>
+          </div>
+
+          <div class="relative w-full h-80 md:h-96">
+            <div id="threeMount" class="w-full h-full rounded-xl glass p-4 flex items-center justify-center"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="py-16">
+      <div class="container mx-auto px-6">
+        <h2 class="text-2xl font-semibold mb-3">What We Build</h2>
+        <p class="text-[var(--muted)] mb-6 max-w-2xl">Web apps, mobile experiences, and design systems crafted for scale and clarity.</p>
+
+        <div class="glass rounded-xl p-1">
+          <div class="grid md:grid-cols-3 gap-4">
+            <button class="service-tab p-6 bg-white/60 rounded-lg" data-tab="web">Web Apps</button>
+            <button class="service-tab p-6 bg-white/60 rounded-lg" data-tab="mobile">Mobile Apps</button>
+            <button class="service-tab p-6 bg-white/60 rounded-lg" data-tab="ui">UI/UX Design</button>
+          </div>
+        </div>
+
+        <div id="serviceShow" class="mt-6"></div>
+      </div>
+    </section>
+
+    <!-- Philosophy -->
+    <section id="philosophy" class="py-16">
+      <div class="container mx-auto px-6">
+        <h2 class="text-2xl font-semibold mb-6">Our Process</h2>
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="glass p-6 rounded-xl">
+            <h4 class="font-semibold">1. Deep Dive & Strategy</h4>
+            <p class="mt-2 text-[var(--muted)]">Define goals, metrics, and constraints before a single line of code.</p>
+          </div>
+          <div class="glass p-6 rounded-xl">
+            <h4 class="font-semibold">2. Bespoke Design & Build</h4>
+            <p class="mt-2 text-[var(--muted)]">Design systems and engineering crafted for longevity and delight.</p>
+          </div>
+          <div class="glass p-6 rounded-xl">
+            <h4 class="font-semibold">3. Launch & Evolve</h4>
+            <p class="mt-2 text-[var(--muted)]">Measure, iterate, and support ongoing growth and stability.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Work -->
+    <section class="py-16">
+      <div class="container mx-auto px-6">
+        <h2 class="text-2xl font-semibold mb-6">Built with Caliber</h2>
+        <div class="overflow-x-auto">
+          <div class="flex gap-6 w-max">
+            <a href="portfolio.html#proj-1" class="project-card magnet block w-80 rounded-lg glass p-4">
+              <div class="h-40 rounded-md bg-gradient-to-br from-[#0b1220] to-[#24303b] mb-3"></div>
+              <h3 class="font-semibold">Aurora Finance</h3>
+              <p class="text-sm text-[var(--muted)] mt-1">Web App · React · Fintech</p>
+            </a>
+            <a href="portfolio.html#proj-2" class="project-card magnet block w-80 rounded-lg glass p-4">
+              <div class="h-40 rounded-md bg-gradient-to-br from-[#ff5a3c] to-[#ff9273] mb-3"></div>
+              <h3 class="font-semibold">Nomad Trails</h3>
+              <p class="text-sm text-[var(--muted)] mt-1">Mobile App · Flutter · Travel</p>
+            </a>
+            <a href="portfolio.html#proj-3" class="project-card magnet block w-80 rounded-lg glass p-4">
+              <div class="h-40 rounded-md bg-gradient-to-br from-[#b8ff2f] to-[#7efca0] mb-3"></div>
+              <h3 class="font-semibold">Foundry Studio</h3>
+              <p class="text-sm text-[var(--muted)] mt-1">Design System · UI/UX</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-10">
+      <div class="container mx-auto px-6">
+        <h2 class="text-2xl font-semibold mb-4">What partners say</h2>
+        <div class="glass p-6 rounded-xl">
+          <blockquote class="italic text-lg">"Code & Caliber turned our concept into a product customers love and engineers can maintain."</blockquote>
+          <p class="mt-3 text-sm text-[var(--muted)]">— Product Lead, Aurora Finance</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section id="contact" class="py-16">
+      <div class="container mx-auto px-6">
+        <div class="glass p-8 rounded-xl grid md:grid-cols-2 gap-8 items-center">
+          <div>
+            <h3 class="text-2xl font-semibold">Have an idea?</h3>
+            <p class="mt-3 text-[var(--muted)]">Let's turn it into a high-caliber digital product.</p>
+          </div>
+          <form id="contactForm" class="space-y-4" aria-label="Contact form">
+            <div class="grid md:grid-cols-2 gap-4">
+              <input required name="name" placeholder="Name" class="p-3 rounded-md border border-transparent bg-white/60" aria-label="Name" />
+              <input required type="email" name="email" placeholder="Email" class="p-3 rounded-md border border-transparent bg-white/60" aria-label="Email" />
+            </div>
+            <textarea required name="message" placeholder="Tell us about the project" rows="4" class="w-full p-3 rounded-md border border-transparent bg-white/60" aria-label="Message"></textarea>
+            <div class="flex justify-end">
+              <button type="submit" class="px-6 py-3 rounded-md magnet" style="background:var(--accent); color:white;">Book Your Free Consultation</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-6">
+      <div class="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div>
+          <a href="#" class="font-serif" style="font-family:Merriweather, serif;"><strong>Code & Caliber</strong></a>
+          <p class="text-sm text-[var(--muted)] mt-1">Digital craftsmanship for ambitious brands.</p>
+        </div>
+        <div class="text-sm text-[var(--muted)]">© <span id="year"></span> Code & Caliber</div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

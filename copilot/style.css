@@ -1,0 +1,4 @@
+/* style.css - small custom rules */
+.project { transition: transform .22s ease, opacity .22s ease; }
+.project:hover { transform: translateY(-6px); }
+.hero-layer h1 { letter-spacing: -0.02em; }
