@@ -83,7 +83,7 @@
         }
       ],
       "repoUrl": "https://github.com/kyletbuzbee/ai-code-review-assistant",
-      "liveUrl": "https://ai-codereview.example.com",
+      "liveUrl": "https://kyletbuzbee.github.io/ai-code-review-assistant",
       "date": "2024-02-10",
       "tags": ["ai", "code-review", "nextjs", "typescript", "aws", "collaboration"]
     },
@@ -126,7 +126,7 @@
         }
       ],
       "repoUrl": "https://github.com/kyletbuzbee/conversion-landing-page-suite",
-      "liveUrl": "https://landing-pages.example.com",
+      "liveUrl": "https://kyletbuzbee.github.io/conversion-landing-page-suite",
       "date": "2024-01-25",
       "tags": ["conversion", "ab-testing", "analytics", "react", "tailwind", "growth"]
     },
@@ -313,7 +313,7 @@
         }
       ],
       "repoUrl": "https://github.com/kyletbuzbee/outreach-admin-dashboard",
-      "liveUrl": "https://outreach-admin.example.com",
+      "liveUrl": "https://kyletbuzbee.github.io/outreach-admin-dashboard",
       "date": "2024-03-05",
       "tags": ["sales", "dashboard", "react", "analytics", "campaigns", "mui"]
     },
@@ -356,7 +356,7 @@
         }
       ],
       "repoUrl": "https://github.com/kyletbuzbee/interactive-messaging-app",
-      "liveUrl": "https://messaging-app.example.com",
+      "liveUrl": "https://kyletbuzbee.github.io/interactive-messaging-app",
       "date": "2024-01-15",
       "tags": ["messaging", "real-time", "react", "nodejs"]
     },
@@ -399,7 +399,7 @@
         }
       ],
       "repoUrl": "https://github.com/kyletbuzbee/gemini-recipe-generator",
-      "liveUrl": "https://recipe-generator.example.com",
+      "liveUrl": "https://kyletbuzbee.github.io/gemini-recipe-generator",
       "date": "2024-04-12",
       "tags": ["ai", "recipes", "gemini", "firebase", "react", "personalization"]
     }
