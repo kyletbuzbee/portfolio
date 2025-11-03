@@ -40,7 +40,7 @@
         }
       ],
       "repoUrl": "https://github.com/kyletbuzbee/accessible-design-system",
-      "liveUrl": "https://design-system.example.com",
+      "liveUrl": "https://kyletbuzbee.github.io/accessible-design-system",
       "date": "2024-03-20",
       "tags": ["accessibility", "design-system", "react", "wcag", "storybook"]
     },
