@@ -1,0 +1,43 @@
+{
+  "id": "conversion-landing-page-suite",
+  "title": "Conversion-Optimized Landing Page Suite",
+  "heroImage": "https://example.com/landing-page-hero.jpg",
+  "shortDescription": "Conversion-optimized landing page suite with comprehensive A/B testing, analytics integration, and performance monitoring for maximum user engagement",
+  "role": "Frontend Developer & Growth Engineer",
+  "techStack": ["React", "TypeScript", "Vite", "Tailwind CSS", "Framer Motion", "Playwright", "Vitest"],
+  "challenge": "Creating a high-converting landing page system that maximizes user engagement through data-driven optimization, A/B testing, and comprehensive performance monitoring across multiple campaign variants.",
+  "solution": "Built a modular landing page suite using React and TypeScript with Vite for optimal performance. Implemented comprehensive A/B testing framework, integrated advanced analytics, created responsive designs with Tailwind CSS, and added smooth animations with Framer Motion. Used Playwright for E2E testing and Vitest for unit testing.",
+  "metrics": [
+    {
+      "label": "Conversion Rate",
+      "value": "+45%",
+      "description": "Improvement over baseline conversion rates"
+    },
+    {
+      "label": "Page Load Speed",
+      "value": "< 2s",
+      "description": "Average time to interactive"
+    },
+    {
+      "label": "A/B Test Variants",
+      "value": "12",
+      "description": "Simultaneous variants for optimization"
+    }
+  ],
+  "screenshots": [
+    {
+      "url": "https://example.com/landing-page-variants.jpg",
+      "alt": "Multiple landing page variants showing A/B test results",
+      "caption": "Different landing page variants optimized for various user segments"
+    },
+    {
+      "url": "https://example.com/analytics-dashboard.jpg",
+      "alt": "Analytics dashboard showing conversion metrics",
+      "caption": "Real-time analytics dashboard tracking conversion rates and user behavior"
+    }
+  ],
+  "repoUrl": "https://github.com/username/conversion-landing-page-suite",
+  "liveUrl": "https://landing-pages.example.com",
+  "date": "2024-01-25",
+  "tags": ["conversion", "ab-testing", "analytics", "react", "tailwind", "growth"]
+}

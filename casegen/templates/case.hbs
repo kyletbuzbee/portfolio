@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{seoMeta.title}}</title>
+  <meta name="description" content="{{seoMeta.description}}">
+  <meta name="keywords" content="{{seoMeta.keywords}}">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="{{seoMeta.title}}">
+  <meta property="og:description" content="{{seoMeta.description}}">
+  <meta property="og:image" content="{{seoMeta.ogImage}}">
+  <meta property="og:url" content="{{seoMeta.ogUrl}}">
+  <meta property="og:type" content="article">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{seoMeta.title}}">
+  <meta name="twitter:description" content="{{seoMeta.description}}">
+  <meta name="twitter:image" content="{{seoMeta.ogImage}}">
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+    {{{jsonLd}}}
+  </script>
+
+  {{> styles}}
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <img src="{{heroImage}}" alt="{{title}} hero image" class="hero-image">
+      <h1>{{title}}</h1>
+      <p class="short-description">{{shortDescription}}</p>
+      <div class="meta">
+        <span class="role">{{role}}</span>
+        <time datetime="{{date}}">{{formatDate date}}</time>
+      </div>
+    </div>
+  </header>
+
+  <main class="content">
+    <div class="container">
+      <section class="overview">
+        <h2>Project Overview</h2>
+        <div class="tech-stack">
+          <h3>Technologies Used</h3>
+          <ul>
+            {{#each techStack}}
+            <li>{{this}}</li>
+            {{/each}}
+          </ul>
+        </div>
+        {{#if tags}}
+        <div class="tags">
+          {{#each tags}}
+          <span class="tag">{{this}}</span>
+          {{/each}}
+        </div>
+        {{/if}}
+      </section>
+
+      <section class="challenge-solution">
+        <div class="challenge">
+          <h2>The Challenge</h2>
+          <p>{{challenge}}</p>
+        </div>
+        <div class="solution">
+          <h2>The Solution</h2>
+          <p>{{solution}}</p>
+        </div>
+      </section>
+
+      <section class="metrics">
+        <h2>Key Metrics</h2>
+        <div class="metrics-grid">
+          {{#each metrics}}
+          <div class="metric-card">
+            <div class="metric-value">{{value}}</div>
+            <div class="metric-label">{{label}}</div>
+            {{#if description}}
+            <div class="metric-description">{{description}}</div>
+            {{/if}}
+          </div>
+          {{/each}}
+        </div>
+      </section>
+
+      {{#if screenshots}}
+      <section class="screenshots">
+        <h2>Screenshots</h2>
+        <div class="screenshots-grid">
+          {{#each screenshots}}
+          <figure class="screenshot">
+            <img src="{{url}}" alt="{{alt}}" loading="lazy">
+            {{#if caption}}
+            <figcaption>{{caption}}</figcaption>
+            {{/if}}
+          </figure>
+          {{/each}}
+        </div>
+      </section>
+      {{/if}}
+
+      <section class="links">
+        <h2>Links</h2>
+        <div class="link-buttons">
+          {{#if repoUrl}}
+          <a href="{{repoUrl}}" class="btn btn-primary" target="_blank" rel="noopener">View Source Code</a>
+          {{/if}}
+          {{#if liveUrl}}
+          <a href="{{liveUrl}}" class="btn btn-secondary" target="_blank" rel="noopener">View Live Demo</a>
+          {{/if}}
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>Generated case study for {{title}}</p>
+    </div>
+  </footer>
+</body>
+</html>

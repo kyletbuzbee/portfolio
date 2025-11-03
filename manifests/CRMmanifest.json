@@ -1,0 +1,48 @@
+{
+  "id": "kl-crm",
+  "title": "KL-CRM: Local-First Customer Relationship Management",
+  "heroImage": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&h=600&fit=crop",
+  "shortDescription": "A comprehensive CRM system built with Python, DuckDB, and Streamlit for local-first data management",
+  "role": "Full-Stack Developer & Data Engineer",
+  "techStack": ["Python", "DuckDB", "Streamlit", "Pandas", "Plotly", "FastAPI", "Pydantic"],
+  "challenge": "Building a local-first CRM that processes Excel/CSV data, normalizes it into a relational schema, provides AI-driven contact enrichment, and serves interactive dashboards - all while maintaining data privacy and working entirely offline.",
+  "solution": "Developed a modular architecture using DuckDB for local data storage, Streamlit for the web interface, and integrated AI enrichment via pluggable adapters. Implemented comprehensive data governance with immutable snapshots and audit logging.",
+  "metrics": [
+    {
+      "label": "Data Processing Speed",
+      "value": "5000 records/min",
+      "description": "Excel/CSV import and normalization throughput"
+    },
+    {
+      "label": "Storage Efficiency",
+      "value": "80% reduction",
+      "description": "Parquet compression vs raw data"
+    },
+    {
+      "label": "Query Performance",
+      "value": "< 100ms",
+      "description": "Average dashboard query response time"
+    }
+  ],
+  "screenshots": [
+    {
+      "url": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
+      "alt": "CRM Dashboard showing sales pipeline analytics",
+      "caption": "Interactive dashboard with sales KPIs and conversion metrics"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
+      "alt": "Data import interface with Excel file processing",
+      "caption": "Excel/CSV import with automatic schema detection"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
+      "alt": "Contact enrichment results with AI-generated insights",
+      "caption": "AI-powered contact enrichment with mock adapter"
+    }
+  ],
+  "repoUrl": "https://github.com/username/kl-crm",
+  "liveUrl": "https://kl-crm-demo.streamlit.app",
+  "date": "2024-10-15",
+  "tags": ["crm", "python", "duckdb", "streamlit", "data-engineering", "ai", "local-first"]
+}

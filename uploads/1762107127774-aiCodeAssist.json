@@ -1,0 +1,43 @@
+{
+  "id": "ai-code-review-assistant",
+  "title": "AI Code Review Assistant",
+  "heroImage": "https://example.com/ai-code-assistant-hero.jpg",
+  "shortDescription": "Intelligent code review platform powered by AI, featuring real-time analysis, automated suggestions, and collaborative workflows for development teams",
+  "role": "Full-Stack Developer & AI Engineer",
+  "techStack": ["Next.js", "React", "TypeScript", "Prisma", "SQLite", "AWS S3", "Socket.io", "Radix UI"],
+  "challenge": "Building an AI-powered code review system that can analyze code quality, security vulnerabilities, and provide intelligent suggestions while handling real-time collaboration for distributed development teams.",
+  "solution": "Developed a full-stack application using Next.js with AI integration through AWS services. Implemented real-time code analysis with Socket.io, created a comprehensive review dashboard with Radix UI components, and built an intelligent suggestion engine that learns from team coding patterns.",
+  "metrics": [
+    {
+      "label": "Code Reviews Automated",
+      "value": "85%",
+      "description": "Percentage of routine checks automated"
+    },
+    {
+      "label": "Review Time Saved",
+      "value": "60%",
+      "description": "Average time reduction in code reviews"
+    },
+    {
+      "label": "Security Issues Caught",
+      "value": "92%",
+      "description": "Vulnerabilities detected before production"
+    }
+  ],
+  "screenshots": [
+    {
+      "url": "https://example.com/ai-review-dashboard.jpg",
+      "alt": "AI code review dashboard with suggestions",
+      "caption": "Intelligent dashboard showing automated suggestions and code quality metrics"
+    },
+    {
+      "url": "https://example.com/realtime-collaboration.jpg",
+      "alt": "Real-time collaborative code review session",
+      "caption": "Live collaborative reviews with AI-powered insights and team discussions"
+    }
+  ],
+  "repoUrl": "https://github.com/username/ai-code-review-assistant",
+  "liveUrl": "https://ai-codereview.example.com",
+  "date": "2024-02-10",
+  "tags": ["ai", "code-review", "nextjs", "typescript", "aws", "collaboration"]
+}

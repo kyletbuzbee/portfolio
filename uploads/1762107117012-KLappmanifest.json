@@ -1,0 +1,149 @@
+{
+  "name": "KL Recycling App",
+  "short_name": "KL-App",
+  "description": "Comprehensive recycling management application for KL Recycling",
+  "version": "1.0.0+1",
+  "author": "KL Recycling",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0b3d91",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en-US",
+  "dir": "ltr",
+  "categories": ["business", "productivity", "utilities"],
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "screenshots/app_screen_shot.png",
+      "sizes": "1080x1920",
+      "type": "image/png",
+      "form_factor": "narrow"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "New Collection",
+      "short_name": "New Collection",
+      "description": "Start a new recycling collection",
+      "url": "/collection/new",
+      "icons": [{ "src": "icons/shortcut-collection.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "View Reports",
+      "short_name": "Reports",
+      "description": "View recycling reports and analytics",
+      "url": "/reports",
+      "icons": [{ "src": "icons/shortcut-reports.png", "sizes": "96x96" }]
+    }
+  ],
+  "related_applications": [
+    {
+      "platform": "play",
+      "url": "https://play.google.com/store/apps/details?id=com.klrecycling.app",
+      "id": "com.klrecycling.app"
+    },
+    {
+      "platform": "itunes",
+      "url": "https://apps.apple.com/app/kl-recycling/id123456789"
+    }
+  ],
+  "prefer_related_applications": false,
+  "features": [
+    "camera",
+    "geolocation",
+    "notifications",
+    "file-system-access"
+  ],
+  "permissions": [
+    "camera",
+    "microphone",
+    "geolocation",
+    "notifications",
+    "storage"
+  ],
+  "flutter": {
+    "framework": "flutter",
+    "version": ">=3.0.0",
+    "sdk": ">=3.0.0 <4.0.0",
+    "dependencies": {
+      "flutter": "sdk",
+      "firebase_core": "^3.15.2",
+      "firebase_auth": "^5.7.0",
+      "cloud_firestore": "^5.6.12",
+      "firebase_storage": "^12.4.10",
+      "camera": "^0.11.3",
+      "connectivity_plus": "^6.1.5",
+      "permission_handler": "^11.4.0",
+      "share_plus": "^10.1.4",
+      "flutter_local_notifications": "^18.0.1",
+      "url_launcher": "^6.3.2",
+      "provider": "^6.1.5",
+      "intl": "^0.19.0",
+      "fl_chart": "^0.70.2",
+      "cupertino_icons": "^1.0.8"
+    },
+    "dev_dependencies": {
+      "flutter_test": "sdk",
+      "flutter_lints": "^5.0.0"
+    },
+    "platforms": {
+      "android": {
+        "package": "com.klrecycling.app",
+        "minSdkVersion": 21,
+        "targetSdkVersion": 34
+      },
+      "ios": {
+        "bundleId": "com.klrecycling.app",
+        "minVersion": "12.0"
+      },
+      "web": {
+        "enabled": true
+      },
+      "windows": {
+        "enabled": true
+      },
+      "macos": {
+        "enabled": true
+      },
+      "linux": {
+        "enabled": true
+      }
+    }
+  },
+  "deployment": {
+    "web": {
+      "baseHref": "/",
+      "deployUrl": "/"
+    },
+    "mobile": {
+      "android": {
+        "keystore": "android/keystore.jks",
+        "keyAlias": "upload"
+      },
+      "ios": {
+        "teamId": "YOUR_TEAM_ID",
+        "bundleId": "com.klrecycling.app"
+      }
+    }
+  },
+  "privacy": {
+    "policy_url": "https://www.klrecycling.com/privacy-policy",
+    "data_collection": "minimal",
+    "offline_capable": true
+  }
+}

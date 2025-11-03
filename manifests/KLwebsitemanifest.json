@@ -1,0 +1,48 @@
+{
+  "id": "kl-recycling-website",
+  "title": "K&L Recycling Services Website",
+  "heroImage": "https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?w=1200&h=600&fit=crop",
+  "shortDescription": "Professional recycling services website with WCAG AA accessibility, PWA features, and comprehensive service information",
+  "role": "Frontend Developer & UX Designer",
+  "techStack": ["HTML5", "CSS3", "JavaScript", "PWA", "WCAG AA", "SEO", "Responsive Design"],
+  "challenge": "Creating an accessible, SEO-optimized website for a family-owned recycling business that showcases their services, builds trust with customers, and provides an excellent user experience across all devices while meeting WCAG AA accessibility standards.",
+  "solution": "Developed a modern, responsive website with progressive web app capabilities, comprehensive accessibility features, structured data markup, and integrated service showcases with testimonials and contact forms.",
+  "metrics": [
+    {
+      "label": "WCAG AA Compliance",
+      "value": "100%",
+      "description": "Full accessibility compliance score"
+    },
+    {
+      "label": "Page Load Speed",
+      "value": "< 2s",
+      "description": "Average page load time on mobile"
+    },
+    {
+      "label": "SEO Performance",
+      "value": "95/100",
+      "description": "Lighthouse SEO score"
+    }
+  ],
+  "screenshots": [
+    {
+      "url": "https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?w=800&h=600&fit=crop",
+      "alt": "Homepage showcasing recycling services and company information",
+      "caption": "Clean, professional homepage with service overview"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop",
+      "alt": "Services page with detailed service descriptions",
+      "caption": "Comprehensive services section with pricing and features"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1551836022-deb4988cc6c0?w=800&h=600&fit=crop",
+      "alt": "Customer testimonials and reviews section",
+      "caption": "Social proof section with verified customer testimonials"
+    }
+  ],
+  "repoUrl": "https://github.com/username/kl-recycling-website",
+  "liveUrl": "https://www.klrecycling.com",
+  "date": "2024-11-01",
+  "tags": ["html", "css", "javascript", "pwa", "accessibility", "seo", "responsive", "business-website"]
+}

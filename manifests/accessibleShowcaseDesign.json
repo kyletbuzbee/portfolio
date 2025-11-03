@@ -1,0 +1,43 @@
+{
+  "id": "accessible-design-system",
+  "title": "Accessible Design System",
+  "heroImage": "https://example.com/accessible-design-hero.jpg",
+  "shortDescription": "Production-ready design system emphasizing accessibility, theming, and developer workflows with comprehensive WCAG compliance",
+  "role": "Frontend Developer & Accessibility Specialist",
+  "techStack": ["React", "TypeScript", "Storybook", "ESLint", "Prettier", "Lerna"],
+  "challenge": "Creating a comprehensive design system that maintains WCAG 2.1 AA compliance across all components while providing flexible theming capabilities and seamless developer experience for large-scale applications.",
+  "solution": "Built a modular design system using React and TypeScript with Storybook for component documentation. Implemented automated accessibility testing with eslint-plugin-jsx-a11y, established design token workflows, and created comprehensive guidelines for developers to maintain accessibility standards.",
+  "metrics": [
+    {
+      "label": "WCAG Compliance",
+      "value": "100%",
+      "description": "All components meet WCAG 2.1 AA standards"
+    },
+    {
+      "label": "Components",
+      "value": "50+",
+      "description": "Fully accessible React components"
+    },
+    {
+      "label": "Development Time",
+      "value": "-40%",
+      "description": "Reduced time to build accessible features"
+    }
+  ],
+  "screenshots": [
+    {
+      "url": "https://example.com/design-system-components.jpg",
+      "alt": "Design system component library in Storybook",
+      "caption": "Component library with live examples and accessibility documentation"
+    },
+    {
+      "url": "https://example.com/theme-switcher.jpg",
+      "alt": "Dark and light theme demonstration",
+      "caption": "Flexible theming system supporting multiple color schemes"
+    }
+  ],
+  "repoUrl": "https://github.com/username/accessible-design-system",
+  "liveUrl": "https://design-system.example.com",
+  "date": "2024-03-20",
+  "tags": ["accessibility", "design-system", "react", "wcag", "storybook"]
+}

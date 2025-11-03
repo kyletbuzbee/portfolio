@@ -1,0 +1,244 @@
+{
+  "name": "K&L Recycling Services",
+  "short_name": "K&L Recycling",
+  "description": "Professional scrap metal recycling services in East Texas since 1970. Fair prices, certified scales, and family-owned integrity.",
+  "version": "1.0.0",
+  "author": "K&L Recycling",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0b3d91",
+  "orientation": "any",
+  "scope": "/",
+  "lang": "en-US",
+  "dir": "ltr",
+  "categories": ["business", "shopping", "utilities"],
+  "icons": [
+    {
+      "src": "assets/icons/icon-72.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/icons/icon-96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/icons/icon-128.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/icons/icon-144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/icons/icon-152.png",
+      "sizes": "152x152",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/icons/icon-384.png",
+      "sizes": "384x384",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "assets/screenshots/homepage-mobile.png",
+      "sizes": "390x844",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "K&L Recycling homepage on mobile"
+    },
+    {
+      "src": "assets/screenshots/services-desktop.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Services page showing recycling options"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Get Quote",
+      "short_name": "Quote",
+      "description": "Request a recycling quote",
+      "url": "/quote",
+      "icons": [{ "src": "assets/icons/shortcut-quote.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "Services",
+      "short_name": "Services",
+      "description": "View our recycling services",
+      "url": "/services",
+      "icons": [{ "src": "assets/icons/shortcut-services.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "Contact Us",
+      "short_name": "Contact",
+      "description": "Get in touch with our team",
+      "url": "/contact",
+      "icons": [{ "src": "assets/icons/shortcut-contact.png", "sizes": "96x96" }]
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false,
+  "features": [
+    "cross-platform",
+    "fast-loading",
+    "offline-capable"
+  ],
+  "edge_side_panel": {
+    "preferred_width": 400
+  },
+  "file_handlers": [
+    {
+      "action": "/upload",
+      "accept": {
+        "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet": [".xlsx"],
+        "text/csv": [".csv"]
+      }
+    }
+  ],
+  "share_target": {
+    "action": "/share",
+    "method": "POST",
+    "enctype": "multipart/form-data",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url",
+      "files": [
+        {
+          "name": "files",
+          "accept": ["image/*", ".pdf", ".doc", ".docx"]
+        }
+      ]
+    }
+  },
+  "handle_links": "preferred",
+  "launch_handler": {
+    "client_mode": "focus-existing"
+  },
+  "protocol_handlers": [
+    {
+      "protocol": "web+recycling",
+      "url": "/handle-protocol?protocol=%s"
+    }
+  ],
+  "scope_extensions": [
+    {"origin": "https://app.klrecycling.com"}
+  ],
+  "services": [
+    {
+      "name": "Container Rentals",
+      "description": "20, 30, and 40-yard containers with drop-off and pick-up services",
+      "url": "/services/container-rentals",
+      "icons": [{ "src": "assets/icons/service-containers.png", "sizes": "64x64" }]
+    },
+    {
+      "name": "Commercial Pickups",
+      "description": "Scheduled collection services for businesses",
+      "url": "/services/commercial-pickups",
+      "icons": [{ "src": "assets/icons/service-pickups.png", "sizes": "64x64" }]
+    },
+    {
+      "name": "Oilfield Demolition",
+      "description": "Specialized demolition with EPA compliance",
+      "url": "/services/oilfield-demolition",
+      "icons": [{ "src": "assets/icons/service-demolition.png", "sizes": "64x64" }]
+    },
+    {
+      "name": "Mobile Crushing",
+      "description": "On-site concrete and asphalt crushing",
+      "url": "/services/mobile-crushing",
+      "icons": [{ "src": "assets/icons/service-crushing.png", "sizes": "64x64" }]
+    }
+  ],
+  "pages": [
+    {
+      "url": "/",
+      "title": "Home - K&L Recycling",
+      "description": "Welcome to K&L Recycling - East Texas scrap metal recycling since 1970"
+    },
+    {
+      "url": "/services",
+      "title": "Services - K&L Recycling",
+      "description": "Professional recycling services including containers, pickups, and demolition"
+    },
+    {
+      "url": "/about",
+      "title": "About Us - K&L Recycling",
+      "description": "Family-owned recycling business serving East Texas for over 50 years"
+    },
+    {
+      "url": "/contact",
+      "title": "Contact - K&L Recycling",
+      "description": "Get in touch with our recycling experts"
+    },
+    {
+      "url": "/quote",
+      "title": "Get Quote - K&L Recycling",
+      "description": "Request a free recycling quote"
+    }
+  ],
+  "seo": {
+    "title": "K&L Recycling - East Texas Scrap Metal Recycling Since 1970",
+    "description": "Professional scrap metal recycling services in East Texas. Fair prices, certified scales, and family-owned integrity. Container rentals, commercial pickups, and demolition services.",
+    "keywords": ["scrap metal", "recycling", "East Texas", "containers", "demolition", "Tyler TX"],
+    "og_image": "assets/images/og-image.jpg",
+    "twitter_card": "summary_large_image"
+  },
+  "contact": {
+    "phone": "+1-903-592-6299",
+    "email": "info@klrecycling.com",
+    "address": {
+      "street": "4134 Chandler Hwy",
+      "city": "Tyler",
+      "state": "TX",
+      "zip": "75702",
+      "country": "US"
+    },
+    "hours": "Monday-Friday 7AM-5PM, Saturday 8AM-12PM"
+  },
+  "business": {
+    "name": "K&L Recycling",
+    "type": "Recycling Center",
+    "founded": "1970",
+    "employees": "25-50",
+    "area_served": "East Texas",
+    "certifications": ["ISRI Member", "TX DEQ Licensed"],
+    "payment_methods": ["Cash", "Check", "Credit Card", "ACH"]
+  },
+  "analytics": {
+    "gtag": "GA_MEASUREMENT_ID",
+    "facebook_pixel": "FB_PIXEL_ID",
+    "conversion_tracking": true
+  },
+  "privacy": {
+    "policy_url": "/privacy-policy",
+    "data_collection": "minimal",
+    "cookies": "essential-only"
+  }
+}

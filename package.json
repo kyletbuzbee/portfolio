@@ -1,0 +1,65 @@
+{
+  "name": "portfolio-generator",
+  "version": "1.0.0",
+  "description": "Automated case study builder for portfolio projects",
+  "type": "module",
+  "main": "dist/cli.js",
+  "bin": {
+    "generate-case": "./dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "ts-node casegen/src/cli.ts",
+    "admin": "node dist/admin.js",
+    "test": "jest",
+    "lint": "eslint casegen/src/**/*.ts",
+    "format": "prettier --write casegen/src/**/*.ts"
+  },
+  "keywords": [
+    "portfolio",
+    "case-study",
+    "pdf",
+    "generator"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^11.0.0",
+    "express": "^4.18.0",
+    "gh-pages": "^6.3.0",
+    "handlebars": "^4.7.0",
+    "multer": "^1.4.0",
+    "puppeteer": "^24.27.0",
+    "sharp": "^0.32.0",
+    "zod": "^3.22.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.0",
+    "@types/jest": "^29.0.0",
+    "@types/multer": "^1.4.0",
+    "@types/node": "^20.0.0",
+    "@types/sharp": "^0.32.0",
+    "eslint": "^8.0.0",
+    "jest": "^29.0.0",
+    "prettier": "^3.0.0",
+    "ts-jest": "^29.0.0",
+    "ts-node": "^10.0.0",
+    "typescript": "^5.0.0"
+  },
+  "jest": {
+    "extensionsToTreatAsEsm": [
+      ".ts"
+    ],
+    "moduleNameMapper": {
+      "^(\\.{1,2}/.*)\\.js$": "$1"
+    },
+    "testEnvironment": "node",
+    "testMatch": [
+      "**/__tests__/**/*.ts",
+      "**/?(*.)+(spec|test).ts"
+    ],
+    "transform": {
+      "^.+\\.ts$": "ts-jest"
+    }
+  }
+}

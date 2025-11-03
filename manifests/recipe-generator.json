@@ -1,0 +1,43 @@
+{
+  "id": "gemini-recipe-generator",
+  "title": "AI-Powered Recipe Generator",
+  "heroImage": "https://example.com/recipe-generator-hero.jpg",
+  "shortDescription": "Intelligent recipe generation application powered by Google Gemini AI, featuring personalized meal suggestions, nutritional analysis, and Firebase integration",
+  "role": "Full-Stack Developer & AI Integration Specialist",
+  "techStack": ["React", "TypeScript", "Vite", "Google Gemini AI", "Firebase"],
+  "challenge": "Creating an intelligent recipe generation system that can understand user preferences, dietary restrictions, and available ingredients to provide personalized recipe suggestions with proper nutritional information.",
+  "solution": "Built a modern web application using React and TypeScript with Vite for optimal performance. Integrated Google Gemini AI for intelligent recipe generation based on user inputs, implemented Firebase for user authentication and data storage, and created an intuitive interface for recipe browsing and management.",
+  "metrics": [
+    {
+      "label": "Recipe Accuracy",
+      "value": "95%",
+      "description": "User satisfaction with AI-generated recipes"
+    },
+    {
+      "label": "Generation Time",
+      "value": "< 3s",
+      "description": "Average time to generate personalized recipes"
+    },
+    {
+      "label": "Active Users",
+      "value": "1,000+",
+      "description": "Monthly active users generating recipes"
+    }
+  ],
+  "screenshots": [
+    {
+      "url": "https://example.com/recipe-generator-main.jpg",
+      "alt": "AI recipe generator main interface",
+      "caption": "User-friendly interface for generating personalized recipes with AI"
+    },
+    {
+      "url": "https://example.com/recipe-details.jpg",
+      "alt": "Generated recipe with nutritional information",
+      "caption": "Detailed recipe view with ingredients, instructions, and nutritional data"
+    }
+  ],
+  "repoUrl": "https://github.com/username/gemini-recipe-generator",
+  "liveUrl": "https://recipe-generator.example.com",
+  "date": "2024-04-12",
+  "tags": ["ai", "recipes", "gemini", "firebase", "react", "personalization"]
+}

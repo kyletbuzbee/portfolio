@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Code Review Assistant - Case Study</title>
+  <meta name="description" content="Intelligent code review platform powered by AI, featuring real-time analysis, automated suggestions, and collaborative workflows for development teams">
+  <meta name="keywords" content="ai, code-review, nextjs, typescript, aws, collaboration">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="AI Code Review Assistant - Case Study">
+  <meta property="og:description" content="Intelligent code review platform powered by AI, featuring real-time analysis, automated suggestions, and collaborative workflows for development teams">
+  <meta property="og:image" content="https://example.com/ai-code-assistant-hero.jpg">
+  <meta property="og:url" content="https://ai-codereview.example.com">
+  <meta property="og:type" content="article">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AI Code Review Assistant - Case Study">
+  <meta name="twitter:description" content="Intelligent code review platform powered by AI, featuring real-time analysis, automated suggestions, and collaborative workflows for development teams">
+  <meta name="twitter:image" content="https://example.com/ai-code-assistant-hero.jpg">
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  "name": "AI Code Review Assistant",
+  "description": "Intelligent code review platform powered by AI, featuring real-time analysis, automated suggestions, and collaborative workflows for development teams",
+  "datePublished": "2024-02-10",
+  "author": {
+    "@type": "Person",
+    "jobTitle": "Full-Stack Developer & AI Engineer"
+  },
+  "about": [
+    {
+      "@type": "Technology",
+      "name": "Next.js"
+    },
+    {
+      "@type": "Technology",
+      "name": "React"
+    },
+    {
+      "@type": "Technology",
+      "name": "TypeScript"
+    },
+    {
+      "@type": "Technology",
+      "name": "Prisma"
+    },
+    {
+      "@type": "Technology",
+      "name": "SQLite"
+    },
+    {
+      "@type": "Technology",
+      "name": "AWS S3"
+    },
+    {
+      "@type": "Technology",
+      "name": "Socket.io"
+    },
+    {
+      "@type": "Technology",
+      "name": "Radix UI"
+    }
+  ],
+  "image": "https://example.com/ai-code-assistant-hero.jpg",
+  "url": "https://ai-codereview.example.com"
+}
+  </script>
+
+  <style>/* Reset and base styles */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fafafa;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  /* Hero section */
+  .hero {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+  }
+  
+  .hero-image {
+    max-width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+  }
+  
+  .short-description {
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+    opacity: 0.9;
+  }
+  
+  .meta {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 0.9rem;
+    opacity: 0.8;
+  }
+  
+  /* Content sections */
+  .content {
+    padding: 60px 0;
+  }
+  
+  section {
+    margin-bottom: 60px;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #2c3e50;
+    position: relative;
+  }
+  
+  h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 2px;
+  }
+  
+  h3 {
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+    color: #34495e;
+  }
+  
+  /* Tech stack */
+  .tech-stack ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    list-style: none;
+  }
+  
+  .tech-stack li {
+    background: #e8f4f8;
+    color: #2c3e50;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+  
+  /* Tags */
+  .tags {
+    margin-top: 20px;
+  }
+  
+  .tag {
+    display: inline-block;
+    background: #f8f9fa;
+    color: #495057;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    border: 1px solid #dee2e6;
+  }
+  
+  /* Challenge and solution */
+  .challenge-solution {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+  
+  .challenge, .solution {
+    padding: 30px;
+    border-radius: 8px;
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .challenge {
+    border-left: 4px solid #e74c3c;
+  }
+  
+  .solution {
+    border-left: 4px solid #27ae60;
+  }
+  
+  /* Metrics */
+  .metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .metric-card {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .metric-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .metric-value {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #667eea;
+    margin-bottom: 10px;
+  }
+  
+  .metric-label {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 10px;
+  }
+  
+  .metric-description {
+    font-size: 0.9rem;
+    color: #7f8c8d;
+  }
+  
+  /* Screenshots */
+  .screenshots-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+  }
+  
+  .screenshot {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .screenshot img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .screenshot:hover img {
+    transform: scale(1.05);
+  }
+  
+  .screenshot figcaption {
+    padding: 15px;
+    font-size: 0.9rem;
+    color: #7f8c8d;
+  }
+  
+  /* Links */
+  .link-buttons {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .btn-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+  }
+  
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(102, 126, 234, 0.4);
+  }
+  
+  .btn-secondary {
+    background: white;
+    color: #667eea;
+    border: 2px solid #667eea;
+  }
+  
+  .btn-secondary:hover {
+    background: #667eea;
+    color: white;
+    transform: translateY(-2px);
+  }
+  
+  /* Footer */
+  .footer {
+    background: #2c3e50;
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+  }
+  
+  .footer p {
+    opacity: 0.8;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .hero h1 {
+      font-size: 2rem;
+    }
+  
+    .short-description {
+      font-size: 1rem;
+    }
+  
+    .meta {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .challenge-solution {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+  
+    .metrics-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .screenshots-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .link-buttons {
+      flex-direction: column;
+    }
+  
+    .btn {
+      text-align: center;
+    }
+  }
+  
+  /* Print styles */
+  @media print {
+    .hero {
+      background: white !important;
+      color: black !important;
+      -webkit-print-color-adjust: exact;
+    }
+  
+    .btn {
+      display: none;
+    }
+  
+    .screenshot img {
+      max-height: 150px;
+    }
+  }
+  </style></head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <img src="https://example.com/ai-code-assistant-hero.jpg" alt="AI Code Review Assistant hero image" class="hero-image">
+      <h1>AI Code Review Assistant</h1>
+      <p class="short-description">Intelligent code review platform powered by AI, featuring real-time analysis, automated suggestions, and collaborative workflows for development teams</p>
+      <div class="meta">
+        <span class="role">Full-Stack Developer &amp; AI Engineer</span>
+        <time datetime="2024-02-10">February 9, 2024</time>
+      </div>
+    </div>
+  </header>
+
+  <main class="content">
+    <div class="container">
+      <section class="overview">
+        <h2>Project Overview</h2>
+        <div class="tech-stack">
+          <h3>Technologies Used</h3>
+          <ul>
+            <li>Next.js</li>
+            <li>React</li>
+            <li>TypeScript</li>
+            <li>Prisma</li>
+            <li>SQLite</li>
+            <li>AWS S3</li>
+            <li>Socket.io</li>
+            <li>Radix UI</li>
+          </ul>
+        </div>
+        <div class="tags">
+          <span class="tag">ai</span>
+          <span class="tag">code-review</span>
+          <span class="tag">nextjs</span>
+          <span class="tag">typescript</span>
+          <span class="tag">aws</span>
+          <span class="tag">collaboration</span>
+        </div>
+      </section>
+
+      <section class="challenge-solution">
+        <div class="challenge">
+          <h2>The Challenge</h2>
+          <p>Building an AI-powered code review system that can analyze code quality, security vulnerabilities, and provide intelligent suggestions while handling real-time collaboration for distributed development teams.</p>
+        </div>
+        <div class="solution">
+          <h2>The Solution</h2>
+          <p>Developed a full-stack application using Next.js with AI integration through AWS services. Implemented real-time code analysis with Socket.io, created a comprehensive review dashboard with Radix UI components, and built an intelligent suggestion engine that learns from team coding patterns.</p>
+        </div>
+      </section>
+
+      <section class="metrics">
+        <h2>Key Metrics</h2>
+        <div class="metrics-grid">
+          <div class="metric-card">
+            <div class="metric-value">85%</div>
+            <div class="metric-label">Code Reviews Automated</div>
+            <div class="metric-description">Percentage of routine checks automated</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-value">60%</div>
+            <div class="metric-label">Review Time Saved</div>
+            <div class="metric-description">Average time reduction in code reviews</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-value">92%</div>
+            <div class="metric-label">Security Issues Caught</div>
+            <div class="metric-description">Vulnerabilities detected before production</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="screenshots">
+        <h2>Screenshots</h2>
+        <div class="screenshots-grid">
+          <figure class="screenshot">
+            <img src="https://example.com/ai-review-dashboard.jpg" alt="AI code review dashboard with suggestions" loading="lazy">
+            <figcaption>Intelligent dashboard showing automated suggestions and code quality metrics</figcaption>
+          </figure>
+          <figure class="screenshot">
+            <img src="https://example.com/realtime-collaboration.jpg" alt="Real-time collaborative code review session" loading="lazy">
+            <figcaption>Live collaborative reviews with AI-powered insights and team discussions</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="links">
+        <h2>Links</h2>
+        <div class="link-buttons">
+          <a href="https://github.com/username/ai-code-review-assistant" class="btn btn-primary" target="_blank" rel="noopener">View Source Code</a>
+          <a href="https://ai-codereview.example.com" class="btn btn-secondary" target="_blank" rel="noopener">View Live Demo</a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>Generated case study for AI Code Review Assistant</p>
+    </div>
+  </footer>
+</body>
+</html>

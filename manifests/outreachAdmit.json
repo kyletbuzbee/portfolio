@@ -1,0 +1,43 @@
+{
+  "id": "outreach-admin-dashboard",
+  "title": "Sales Outreach Admin Dashboard",
+  "heroImage": "https://example.com/outreach-dashboard-hero.jpg",
+  "shortDescription": "Comprehensive sales outreach admin dashboard with real-time analytics, campaign management, and team performance tracking",
+  "role": "Full-Stack Developer",
+  "techStack": ["React", "TypeScript", "Material-UI", "Recharts", "Axios", "React Router"],
+  "challenge": "Building a comprehensive sales dashboard that provides real-time insights into outreach campaigns, team performance metrics, and campaign effectiveness while maintaining excellent user experience and data visualization.",
+  "solution": "Developed a responsive React dashboard using TypeScript and Material-UI for the interface. Implemented real-time data visualization with Recharts, created campaign management workflows, and built comprehensive analytics features with React Router for navigation. Used Axios for API communication and date-fns for date handling.",
+  "metrics": [
+    {
+      "label": "Campaign Efficiency",
+      "value": "+65%",
+      "description": "Improvement in outreach campaign performance"
+    },
+    {
+      "label": "Response Rate",
+      "value": "28%",
+      "description": "Average email response rate across campaigns"
+    },
+    {
+      "label": "Team Productivity",
+      "value": "+40%",
+      "description": "Increase in daily outreach activities"
+    }
+  ],
+  "screenshots": [
+    {
+      "url": "https://example.com/outreach-dashboard-main.jpg",
+      "alt": "Main dashboard showing campaign analytics and metrics",
+      "caption": "Real-time dashboard displaying campaign performance and team metrics"
+    },
+    {
+      "url": "https://example.com/campaign-management.jpg",
+      "alt": "Campaign management interface",
+      "caption": "Comprehensive campaign creation and management interface"
+    }
+  ],
+  "repoUrl": "https://github.com/username/outreach-admin-dashboard",
+  "liveUrl": "https://outreach-admin.example.com",
+  "date": "2024-03-05",
+  "tags": ["sales", "dashboard", "react", "analytics", "campaigns", "mui"]
+}

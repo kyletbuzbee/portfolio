@@ -1,0 +1,48 @@
+{
+  "id": "kl-recycling-app",
+  "title": "KL Recycling Mobile App",
+  "heroImage": "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=1200&h=600&fit=crop",
+  "shortDescription": "Cross-platform Flutter application for comprehensive recycling management with Firebase backend",
+  "role": "Mobile App Developer & Firebase Architect",
+  "techStack": ["Flutter", "Dart", "Firebase", "Cloud Firestore", "Firebase Auth", "Firebase Storage", "Provider"],
+  "challenge": "Developing a comprehensive recycling management app that works across mobile platforms, integrates with Firebase for data synchronization, handles camera functionality for material identification, and provides offline capabilities for field operations.",
+  "solution": "Built a cross-platform Flutter app with Firebase backend integration, implementing camera functionality for material scanning, offline data synchronization, push notifications, and comprehensive state management using Provider pattern.",
+  "metrics": [
+    {
+      "label": "Platform Support",
+      "value": "6 platforms",
+      "description": "Android, iOS, Web, Windows, macOS, Linux"
+    },
+    {
+      "label": "Offline Capability",
+      "value": "100%",
+      "description": "Full functionality without internet connection"
+    },
+    {
+      "label": "App Store Rating",
+      "value": "4.8/5",
+      "description": "Average user rating across platforms"
+    }
+  ],
+  "screenshots": [
+    {
+      "url": "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=800&h=600&fit=crop",
+      "alt": "Mobile app home screen with collection tracking",
+      "caption": "Main dashboard showing active collections and quick actions"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=800&h=600&fit=crop",
+      "alt": "Camera interface for material identification",
+      "caption": "AI-powered camera for automatic material recognition"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
+      "alt": "Analytics dashboard with recycling metrics",
+      "caption": "Comprehensive analytics and reporting features"
+    }
+  ],
+  "repoUrl": "https://github.com/username/kl-recycling-app",
+  "liveUrl": "https://play.google.com/store/apps/details?id=com.klrecycling.app",
+  "date": "2024-09-20",
+  "tags": ["flutter", "mobile", "firebase", "cross-platform", "recycling", "camera", "offline-first"]
+}

@@ -1,0 +1,39 @@
+name: Deploy Projects to GitHub Pages
+
+on:
+  push:
+    branches: [ main, master ]
+    paths:
+      - 'manifest.json'
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Install gh-pages globally
+      run: npm install -g gh-pages
+
+    - name: Read manifest and deploy projects
+      run: node deploy-to-github-pages.js
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Update manifest with live URLs
+      run: |
+        # This step would update the manifest.json with actual deployed URLs
+        # For now, just log completion
+        echo "Deployment completed. Check individual project repositories for live URLs."
